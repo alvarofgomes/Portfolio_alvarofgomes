@@ -1,0 +1,431 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.transparent-div {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 7%;
+    border: none;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 998;
+}
+
+.presentation-div{
+    width: 100%;
+    height: 93%;
+    display: flex;
+    border: none;
+    margin: 0;
+    padding: 0; 
+    min-height: 93%;
+}
+
+.presentation-projects{
+    width: 100%;
+    height: 93%;
+    display: none;
+    border: none;
+    margin: 0;
+    padding: 0; 
+    min-height: 93%;
+}
+
+.presentation-about{
+    width: 100%;
+    height: 93vh;
+    display: none;
+    border: none;
+    margin: 0;
+    padding: 0; 
+    min-height: 93%;
+}
+
+.presentation-div .animation{
+    width: 30%;
+    height: 40%;
+    display: flex;
+    position: relative;
+    left: 35%;
+    top: 8%;
+}
+
+.presentation-div .presentation-data{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size: 4rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.presentation-div .presentation-frase{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 47%;
+    font-size: 1.25rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+.presentation-div .presentation-ability{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 55%;
+    font-size: 2.125rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(224, 224, 224);
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.presentation-div .presentation-skills{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 62vh;
+    font-size: 1.25rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.presentation-div .presentation-skills .skills{
+    font-family: "Poppins", "Roboto", sans-serif;
+    font-size: 1.0125rem;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    height: 32px;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0px;
+    text-decoration: none;
+    border: 0px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    box-shadow: transparent;
+}
+
+.presentation-div .presentation-skills .skills:hover{
+    transform: scale(1.1) translateZ(0px);
+}
+
+.presentation-div .presentation-connections{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 70%;
+    font-size: 2.125rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(224, 224, 224);
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.presentation-div .presentation-midias{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 77%;
+    font-size: 1.25rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.presentation-div .presentation-midias .midias{
+    font-family: "Poppins", "Roboto", sans-serif;
+    font-size: 2.0125rem;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    height: 52px;
+    white-space: nowrap;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    outline: 0px;
+    text-decoration: none;
+    border: 0px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+}
+
+.presentation-div .presentation-midias .midias:hover{
+    transform: scale(1.1) translateZ(0px);
+}
+
+
+.body-css{
+    background-image: url('9099100.jpg');
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.menu-item {
+    margin: 0 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: scale(1.1) translateZ(0px);
+}
+
+.project-mv{
+    height: 70%;
+    width: 25%;
+    left: 127%;
+    position: absolute;
+    top: 13%;
+    padding-right: 7%;
+}
+
+.project-samsung{
+    height: 70%;
+    width: 25%;
+    left: 67%;
+    position: absolute;
+    top: 13%;
+}
+
+.project-v3{
+    height: 70%;
+    width: 25%;
+    left: 37%;
+    position: absolute;
+    top: 13%;
+}
+
+.project-sulwork{
+    height: 70%;
+    width: 25%;
+    left: 97%;
+    position: absolute;
+    top: 13%;
+}
+
+.project-stoneridge{
+    height: 70%;
+    width: 25%;
+    left: 7%;
+    position: absolute;
+    top: 13%;
+}
+
+.next-page{
+    width: 3%;
+    height: 6%;
+    position: absolute;
+    right: 3%;
+    top: 43%;
+}
+
+.previos-page{
+    width: 3%;
+    height: 6%;
+    position: absolute;
+    left: 3%;
+    top: 43%;
+}
+
+.project-title{
+    font-size: 2.525rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    background: #dddcdc;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid black;
+    border-color: black;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    height: 20%; 
+    display: flex;
+    
+}
+
+.project-about{
+    font-size: 1rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    line-height: 1.2;
+    background: linear-gradient(90deg, rgba(29, 165, 189,0.5), rgba(104, 92, 98,0.5));
+    color: aliceblue;
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    border: 1px solid black;
+    border-color: black;
+    text-align: justify;
+    border-radius: 0% 0% 30px 30px;
+    height: 80%; 
+    display: flex;
+    padding: 30px 30px; 
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #e5ebe9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #328867;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(90deg, rgb(29, 165, 189), rgb(104, 92, 98));
+    height: 100%;
+    width: 100%;
+    animation: blink 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.next-button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1) translateZ(0px);
+}
+
+.select-idioma{
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    border-radius: 10%;
+    position: absolute;
+    right: 50px;
+    top: 30%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.select-idioma option {
+    background-color: rgba(58, 172, 192, 0.7);
+    color: aliceblue;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, rgb(29, 165, 189), rgb(104, 92, 98));
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #c4c2c2;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #e7e5e5;
+}

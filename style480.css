@@ -1,0 +1,369 @@
+@media (max-width: 480px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .transparent-div {
+        width: 100%;
+        height: 7%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: transparent;
+        min-height: 7%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 998;
+    }
+
+    .presentation-div {
+        width: 100%;
+        height: 93%;
+        display: flex;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .presentation-projects {
+        width: 100%;
+        height: 93%;
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        top: 7%;
+        position: relative;
+    }
+
+    .presentation-div .animation {
+        width: 50%;
+        height: 60%;
+        display: flex;
+        position: absolute;
+        left: 25%;
+        top: -8%;
+    }
+
+    .presentation-div .presentation-data {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        position: absolute;
+        color: white;
+        top: 28%;
+        font-size: 2rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation-div .presentation-frase {
+        width: 80%;
+        height: 20%;
+        display: flex;
+        position: absolute;
+        color: white;
+        top: 35%;
+        font-size: 0.95rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        color: rgb(224, 224, 224);
+        font-weight: 500;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+        left: 10%;
+        text-align: center;
+    }
+
+    .presentation-div .presentation-ability {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        position: absolute;
+        color: white;
+        top: 45%;
+        font-size: 1.7rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        color: rgb(224, 224, 224);
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation-div .presentation-skills {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        position: absolute;
+        color: white;
+        top: 58%;
+        font-size: 0.95rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        color: rgb(224, 224, 224);
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+    }
+    
+    .presentation-div .presentation-skills .skills {
+        font-family: "Poppins", "Roboto", sans-serif;
+        font-size: 0.7rem;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        white-space: nowrap;
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        outline: 0px;
+        text-decoration: none;
+        border: 0px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin: 5px; 
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: transparent;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        backdrop-filter: blur(5px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+    }
+
+    .presentation-div .presentation-skills .skills:hover {
+        transform: scale(1.1) translateZ(0px);
+    }
+
+    .presentation-div .presentation-connections {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        position: absolute;
+        color: white;
+        top: 73%;
+        font-size: 1.5rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        color: rgb(224, 224, 224);
+        font-weight: 400;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation-div .presentation-midias {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        position: absolute;
+        color: white;
+        top: 80%;
+        font-size: 0.7rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        color: rgb(224, 224, 224);
+        font-weight: 500;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation-div .presentation-midias .midias {
+        font-family: "Poppins", "Roboto", sans-serif;
+        font-size: 2.0125rem;
+        display: inline-flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        height: 52px;
+        white-space: nowrap;
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        outline: 0px;
+        text-decoration: none;
+        border: 0px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin: 0 10px;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        backdrop-filter: blur(5px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
+    }
+
+    .presentation-div .presentation-midias .midias:hover {
+        transform: scale(1.1) translateZ(0px);
+    }
+
+
+    .body-css {
+        background-image: url('9099100.jpg');
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .menu-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        color: white;
+        font-size: 15px;
+        z-index: 999;
+    }
+
+    .menu-item {
+        margin: 0 5px;
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.1) translateZ(0px);
+    }
+
+    .project-mv {
+        height: 25%;
+        width: 90%;
+        left: 5%;
+        position: absolute;
+        top: 136%;
+        padding-right: 0%;
+    }
+
+    .project-samsung {
+        height: 25%;
+        width: 90%;
+        left: 5%;
+        position: absolute;
+        top: 69%;
+    }
+
+    .project-v3 {
+        height: 25%;
+        width: 90%;
+        left: 5%;
+        position: absolute;
+        top: 36%;
+    }
+
+    .project-sulwork {
+        height: 25%;
+        width: 90%;
+        left: 5%;
+        position: absolute;
+        top: 102%;
+    }
+
+    .project-stoneridge {
+        height: 25%;
+        width: 90%;
+        left: 5%;
+        position: absolute;
+        top: 3%;
+    }
+
+    .project-title {
+        font-size: 1.525rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        background: #dddcdc;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        justify-content: center;
+        align-items: center;
+        border: 0.5px solid black;
+        border-color: black;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px 30px 0 0;
+        height: 20%;
+        display: flex;
+
+    }
+
+    .project-about {
+        font-size: 0.5rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+        line-height: 1.2;
+        background: linear-gradient(90deg, rgba(29, 165, 189,0.5), rgba(104, 92, 98,0.5));
+        color: aliceblue;
+        font-weight: 200;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
+        border: 1px solid black;
+        border-color: black;
+        text-align: justify;
+        border-radius: 0% 0% 30px 30px;
+        height: 90%;
+        display: flex;
+        padding: 10px 10px;
+    }
+
+
+    .select-idioma {
+        background-color: rgba(29, 165, 189,0.1);
+        border: 0px;
+        color: aliceblue;
+        border-radius: 10%;
+        position: absolute;
+        right: 3%;
+        top: 33%;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .select-idioma option {
+        background-color: rgba(29, 165, 189,0.7);
+        color: aliceblue;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+      
+    ::-webkit-scrollbar-track {
+        background: linear-gradient(90deg, rgb(29, 165, 189), rgb(104, 92, 98));
+    }
+      
+    ::-webkit-scrollbar-thumb {
+        background: #c4c2c2;
+        border-radius: 10px;
+    }
+      
+    ::-webkit-scrollbar-thumb:hover {
+        background: #e7e5e5;
+    }
+
+}

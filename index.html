@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Alvaro Gomes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style480.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="handler.js" defer></script>
+</head>
+<body class="body-css" onload="UpdateLanguage('pt')">
+    <!--Inicio do menu com interatividade-->
+    <div class="transparent-div">
+        <ul class="menu-list">
+            <li class="menu-item" onclick="showDiv(1)"><i class="fas fa-home"></i> <a id="home">Início</a>
+                <div id="menu-item-1" style="position: relative;
+                    bottom: -2px;
+                    left: 0px;
+                    right: 0px;
+                    height: 2px;
+                    display: flex;
+                    background: linear-gradient(90deg, rgb(205, 248, 255), rgb(141, 194, 255));">
+                </div>
+            </li>
+            <li class="menu-item" onclick="showDiv(2)"><i class="fas fa-folder-open"></i> <a id="project">Projetos</a> 
+                <div id="menu-item-2" style="position: relative;
+                    bottom: -2px;
+                    left: 0px;
+                    right: 0px;
+                    height: 2px;
+                    display: none;
+                    background: linear-gradient(90deg, rgb(205, 248, 255), rgb(141, 194, 255));">
+                </div>
+            </li>
+            <select id="select-idioma" class="select-idioma">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+            </select>
+        </ul>
+    </div>
+     <!--Fim do menu com interatividade-->
+
+     <!--Inicio da apresentação interativa-->
+    <div class="presentation-div" id="presentation">
+        <div class="animation">
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+            <dotlottie-player src="https://lottie.host/21bad96b-1943-4152-8084-dcdf8e905489/TlpwfB9IHA.lottie" background="transparent" speed="1" style="width: 500px;" loop autoplay></dotlottie-player>
+        </div>
+        <div class="presentation-data">Alvaro Gomes</div>
+        <div class="presentation-frase" id="description"></div>
+        <div class="presentation-ability" id="skill"></div>
+        <div class="presentation-skills">
+            <span class="skills">JavaScript</span>
+            <span class="skills">Java</span>
+            <span class="skills">Go</span>
+            <span class="skills">Sql/Mysql</span>
+            <span class="skills">C++</span>
+            <span class="skills">Node.js</span>
+            <span class="skills">Ruby</span>
+            <span class="skills">Spring Boot</span>
+        </div>
+        <div class="presentation-connections" id="connect"></div>
+        <div class="presentation-midias">
+            <a href="https://github.com/alvarofgomes" target="_blank" class="midias">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" class="midias">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alvarofgomes" target="_blank" class="midias">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <!--Fim da apresentação interativa-->
+    </div>
+    <!--Inicio de agrupamentos de projetos-->
+    <div class="presentation-projects" id="projects">
+        <div class="project-stoneridge" id="stoneridge">
+            <div class="project-title">BC-HUB</div>
+            <div class="project-about" >
+                <a id="bc_hub"></a>
+            </div>
+        </div>
+        <div class="project-v3" id="v3">
+            <div class="project-title">FC-CALC</div>
+            <div class="project-about">
+                <a id="fc_calc"></a>  
+            </div>
+        </div>
+    </div>
+    <!--Fim de agrupamentos de projetos-->
+</body>
+</html>
