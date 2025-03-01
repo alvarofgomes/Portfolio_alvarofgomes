@@ -256,16 +256,7 @@ html, body {
     transform: scale(1.1) translateZ(0px);
 }
 
-.project-mv{
-    height: 70%;
-    width: 25%;
-    left: 127%;
-    position: absolute;
-    top: 13%;
-    padding-right: 7%;
-}
-
-.project-samsung{
+.project-amigo-secreto{
     height: 70%;
     width: 25%;
     left: 67%;
@@ -273,7 +264,7 @@ html, body {
     top: 13%;
 }
 
-.project-v3{
+.project-calc{
     height: 70%;
     width: 25%;
     left: 37%;
@@ -281,15 +272,8 @@ html, body {
     top: 13%;
 }
 
-.project-sulwork{
-    height: 70%;
-    width: 25%;
-    left: 97%;
-    position: absolute;
-    top: 13%;
-}
 
-.project-stoneridge{
+.project-hub{
     height: 70%;
     width: 25%;
     left: 7%;

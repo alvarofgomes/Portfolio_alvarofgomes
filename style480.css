@@ -249,24 +249,8 @@
         transform: scale(1.1) translateZ(0px);
     }
 
-    .project-mv {
-        height: 25%;
-        width: 90%;
-        left: 5%;
-        position: absolute;
-        top: 136%;
-        padding-right: 0%;
-    }
 
-    .project-samsung {
-        height: 25%;
-        width: 90%;
-        left: 5%;
-        position: absolute;
-        top: 69%;
-    }
-
-    .project-v3 {
+    .project-calc {
         height: 25%;
         width: 90%;
         left: 5%;
@@ -274,15 +258,15 @@
         top: 36%;
     }
 
-    .project-sulwork {
+    .project-amigo-secreto {
         height: 25%;
         width: 90%;
         left: 5%;
         position: absolute;
-        top: 102%;
+        top: 36%;
     }
 
-    .project-stoneridge {
+    .project-hub {
         height: 25%;
         width: 90%;
         left: 5%;
