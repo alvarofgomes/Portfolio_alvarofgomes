@@ -1,102 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alvaro Gomes</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style480.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style480.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <script src="handler.js" defer></script>
+    <script src="js/handler.js" defer></script>
 </head>
-<body class="body-css" onload="UpdateLanguage('pt')">
-    <!--Inicio do menu com interatividade-->
-    <div class="transparent-div">
-        <ul class="menu-list">
-            <li class="menu-item" onclick="showDiv(1)"><i class="fas fa-home"></i> <a id="home">Início</a>
-                <div id="menu-item-1" style="position: relative;
-                    bottom: -2px;
-                    left: 0px;
-                    right: 0px;
-                    height: 2px;
-                    display: flex;
-                    background: linear-gradient(90deg, rgb(205, 248, 255), rgb(141, 194, 255));">
-                </div>
-            </li>
-            <li class="menu-item" onclick="showDiv(2)"><i class="fas fa-folder-open"></i> <a id="project">Projetos</a> 
-                <div id="menu-item-2" style="position: relative;
-                    bottom: -2px;
-                    left: 0px;
-                    right: 0px;
-                    height: 2px;
-                    display: none;
-                    background: linear-gradient(90deg, rgb(205, 248, 255), rgb(141, 194, 255));">
-                </div>
-            </li>
+<body class="body-css">
+    <header class="transparent-div">
+        <nav class="menu-list">
+            <button class="menu-item active" onclick="showDiv('presentation', this)">
+                <i class="fas fa-home"></i>
+                <span id="home">Início</span>
+            </button>
+
+            <button class="menu-item" onclick="showDiv('projects', this)">
+                <i class="fas fa-folder-open"></i>
+                <span id="project">Projetos</span>
+            </button>
+
+            <button class="menu-item" onclick="showDiv('certificates', this)">
+                <i class="fas fa-certificate"></i>
+                <span id="certificate">Certificados</span>
+            </button>
+
             <select id="select-idioma" class="select-idioma">
                 <option value="pt">Português</option>
                 <option value="en">English</option>
             </select>
-        </ul>
-    </div>
-     <!--Fim do menu com interatividade-->
+        </nav>
+    </header>
 
-     <!--Inicio da apresentação interativa-->
-    <div class="presentation-div" id="presentation">
-        <div class="animation">
-            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <main class="main-content">
+        <section class="content-section active-section" id="presentation">
+            <div class="animation">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player
+                    src="https://lottie.host/21bad96b-1943-4152-8084-dcdf8e905489/TlpwfB9IHA.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 500px;"
+                    loop
+                    autoplay>
+                </dotlottie-player>
+            </div>
 
-            <dotlottie-player src="https://lottie.host/21bad96b-1943-4152-8084-dcdf8e905489/TlpwfB9IHA.lottie" background="transparent" speed="1" style="width: 500px;" loop autoplay></dotlottie-player>
-        </div>
-        <div class="presentation-data">Alvaro Gomes</div>
-        <div class="presentation-frase" id="description"></div>
-        <div class="presentation-ability" id="skill"></div>
-        <div class="presentation-skills">
-            <span class="skills">JavaScript</span>
-            <span class="skills">Java</span>
-            <span class="skills">Go</span>
-            <span class="skills">Sql/Mysql</span>
-            <span class="skills">C++</span>
-            <span class="skills">Node.js</span>
-            <span class="skills">Ruby</span>
-            <span class="skills">Spring Boot</span>
-        </div>
-        <div class="presentation-connections" id="connect"></div>
-        <div class="presentation-midias">
-            <a href="https://github.com/alvarofgomes" target="_blank" class="midias">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" class="midias">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/alvarofgomes" target="_blank" class="midias">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-        <!--Fim da apresentação interativa-->
-    </div>
-    <!--Inicio de agrupamentos de projetos-->
-    <div class="presentation-projects" id="projects">
-        <div class="project-hub" id="hub">
-            <div class="project-title">BC-HUB</div>
-            <div class="project-about" >
-                <a id="bc_hub"></a>
+            <div class="presentation-data">Alvaro Gomes</div>
+            <div class="presentation-frase" id="description"></div>
+            <div class="presentation-ability" id="skill"></div>
+
+            <div class="presentation-skills">
+                <span class="skills">JavaScript</span>
+                <span class="skills">Java</span>
+                <span class="skills">Go</span>
+                <span class="skills">SQL</span>
+                <span class="skills">Node.js</span>
+                <span class="skills">Spring Boot</span>
             </div>
-        </div>
-        <div class="project-calc" id="calc">
-            <div class="project-title">FC-CALC</div>
-            <div class="project-about">
-                <a id="fc_calc"></a>  
+
+            <div class="presentation-connections" id="connect"></div>
+
+            <div class="presentation-midias">
+                <a href="https://github.com/alvarofgomes" target="_blank" class="midias">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" class="midias">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alvarofgomes" target="_blank" class="midias">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
-        </div>
-        <div class="project-amigo-secreto" id="secret">
-            <div class="project-title">AM-SEC</div>
-            <div class="project-about">
-                <a id="amg_secret"></a>  
+        </section>
+
+        <section class="content-section" id="projects">
+            <h2 class="section-title" id="projects_title">Projetos</h2>
+
+            <div class="cards-grid">
+                <article class="custom-card">
+                    <div class="project-title">BC-HUB</div>
+                    <div class="project-about">
+                        <a id="bc_hub"></a>
+                    </div>
+                </article>
+
+                <article class="custom-card">
+                    <div class="project-title">FC-CALC</div>
+                    <div class="project-about">
+                        <a id="fc_calc"></a>
+                    </div>
+                </article>
+
+                <article class="custom-card">
+                    <div class="project-title">AM-SEC</div>
+                    <div class="project-about">
+                        <a id="amg_secret"></a>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-    <!--Fim de agrupamentos de projetos-->
+        </section>
+
+        <section class="content-section" id="certificates">
+            <div class="certificates-grid" id="certificates-grid"></div>
+        </section>
+    </main>
 </body>
 </html>
