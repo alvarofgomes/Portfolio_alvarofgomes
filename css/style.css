@@ -359,7 +359,48 @@ html, body {
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
-    padding: 32px 40px 30px 40px;
+    padding: 0 40px 30px 40px;
+}
+
+.certificates-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.25s, transform 0.2s;
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.04);
+}
+
+.filter-btn.active {
+    background: linear-gradient(90deg, rgb(29, 165, 189), rgb(104, 92, 98));
+    border-color: transparent;
+}
+
+.filter-count {
+    opacity: 0.75;
+    font-size: 0.78rem;
 }
 
 .certificates-grid {
@@ -377,21 +418,48 @@ html, body {
     padding: 16px;
     backdrop-filter: blur(8px);
     box-shadow: rgba(0, 0, 0, 0.20) 0px 4px 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.certificate-card iframe {
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 30px;
+}
+
+.certificate-icon-area {
     width: 100%;
-    height: 240px;
-    border: none;
+    height: 150px;
     border-radius: 16px;
-    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-icon {
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0.9;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.certificate-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    margin: 12px 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .certificate-card h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-align: center;
     color: white;
-    margin: 14px 0 10px;
+    margin: 8px 0 12px;
+    line-height: 1.4;
 }
 
 .certificate-link {
@@ -402,11 +470,21 @@ html, body {
     padding: 10px 14px;
     border-radius: 12px;
     background: linear-gradient(90deg, rgb(29, 165, 189), rgb(104, 92, 98));
-    transition: 0.3s;
+    transition: transform 0.2s;
 }
 
 .certificate-link:hover {
     transform: scale(1.03);
+}
+
+@media (max-width: 1024px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #certificates {
+        padding: 0 24px 24px 24px;
+    }
 }
 
 ::-webkit-scrollbar {
