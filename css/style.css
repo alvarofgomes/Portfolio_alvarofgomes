@@ -123,6 +123,9 @@ html, body {
     width: 100%;
     height: 93vh;
     overflow: hidden;
+}
+
+#presentation.active-section {
     display: flex;
     align-items: center;
 }
