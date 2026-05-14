@@ -37,43 +37,50 @@
 
     <main class="main-content">
         <section class="content-section active-section" id="presentation">
-            <div class="animation">
-                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-                <dotlottie-player
-                    src="https://lottie.host/21bad96b-1943-4152-8084-dcdf8e905489/TlpwfB9IHA.lottie"
-                    background="transparent"
-                    speed="1"
-                    style="width: 500px;"
-                    loop
-                    autoplay>
-                </dotlottie-player>
+            <div class="presentation-left">
+                <div class="animation">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player
+                        src="https://lottie.host/21bad96b-1943-4152-8084-dcdf8e905489/TlpwfB9IHA.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; max-width: 450px;"
+                        loop
+                        autoplay>
+                    </dotlottie-player>
+                </div>
             </div>
 
-            <div class="presentation-data">Alvaro Gomes</div>
-            <div class="presentation-frase" id="description"></div>
-            <div class="presentation-ability" id="skill"></div>
+            <div class="presentation-right">
+                <div class="presentation-data">Alvaro Gomes</div>
+                <div class="presentation-role">
+                    <span id="typing-role"></span><span class="typing-cursor">|</span>
+                </div>
+                <div class="presentation-frase" id="description"></div>
+                <div class="presentation-ability" id="skill"></div>
 
-            <div class="presentation-skills">
-                <span class="skills">JavaScript</span>
-                <span class="skills">Java</span>
-                <span class="skills">Go</span>
-                <span class="skills">SQL</span>
-                <span class="skills">Node.js</span>
-                <span class="skills">Spring Boot</span>
-            </div>
+                <div class="presentation-skills">
+                    <span class="skills"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skills"><i class="fab fa-java"></i> Java</span>
+                    <span class="skills"><i class="fas fa-code"></i> Go</span>
+                    <span class="skills"><i class="fas fa-database"></i> SQL</span>
+                    <span class="skills"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="skills"><i class="fas fa-leaf"></i> Spring Boot</span>
+                </div>
 
-            <div class="presentation-connections" id="connect"></div>
+                <div class="presentation-connections" id="connect"></div>
 
-            <div class="presentation-midias">
-                <a href="https://github.com/alvarofgomes" target="_blank" class="midias">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" class="midias">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/alvarofgomes" target="_blank" class="midias">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <div class="presentation-midias">
+                    <a href="https://github.com/alvarofgomes" target="_blank" class="midias">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" class="midias">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alvarofgomes" target="_blank" class="midias">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
         </section>
 

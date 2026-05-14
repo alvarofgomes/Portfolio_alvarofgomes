@@ -123,7 +123,8 @@ const textos = {
         bc_hub: `O site foi criado para destacar o anime Black Clover de forma simples, mas eficaz, usando animações leves e focando na experiência visual e interativa. Acesse o projeto <a href="https://alvarofgomes.github.io/site-simples/" target="_blank" style="color:#ccc; text-decoration:none;">aqui</a>.`,
         fc_calc: `A calculadora de freelancer foi desenvolvida com JavaScript para calcular o valor da hora trabalhada. Acesse o projeto <a href="https://alvarofgomes.github.io/calculadora-freelancer/" target="_blank" style="color:#ccc; text-decoration:none;">aqui</a>.`,
         amg_secret: `Aplicação web interativa para organizar sorteios de amigo secreto de forma simples e dinâmica. Acesse o projeto <a href="https://alvarofgomes.github.io/amigos-secreto/" target="_blank" style="color:#ccc; text-decoration:none;">aqui</a>.`,
-        open_pdf: "Abrir PDF"
+        open_pdf: "Abrir PDF",
+        typing_roles: ["Desenvolvedor Back-end", "Entusiasta de Java", "Estudante de Spring Boot"]
     },
     en: {
         home: "Home",
@@ -137,12 +138,14 @@ const textos = {
         bc_hub: `The website was created to highlight the anime Black Clover in a simple yet effective way. Access the project <a href="https://alvarofgomes.github.io/site-simples/" target="_blank" style="color:#ccc; text-decoration:none;">here</a>.`,
         fc_calc: `The freelancer calculator was developed with JavaScript to calculate hourly work rates. Access the project <a href="https://alvarofgomes.github.io/calculadora-freelancer/" target="_blank" style="color:#ccc; text-decoration:none;">here</a>.`,
         amg_secret: `Interactive web app designed to organize the traditional Secret Friend game. Access the project <a href="https://alvarofgomes.github.io/amigos-secreto/" target="_blank" style="color:#ccc; text-decoration:none;">here</a>.`,
-        open_pdf: "Open PDF"
+        open_pdf: "Open PDF",
+        typing_roles: ["Back-end Developer", "Java Enthusiast", "Spring Boot Learner"]
     }
 };
 
 let idiomaAtual = "pt";
 let filtroAtual = "todos";
+let typingTimeout = null;
 
 function getBasePath() {
     const path = window.location.pathname;
@@ -166,6 +169,46 @@ function getDescricaoResponsiva() {
     }
 
     return textos[idiomaAtual].description;
+}
+
+function startTypingEffect() {
+    clearTimeout(typingTimeout);
+
+    const roles = textos[idiomaAtual].typing_roles;
+    const el = document.getElementById("typing-role");
+    if (!el) return;
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    el.textContent = "";
+
+    function type() {
+        const current = roles[roleIndex];
+
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+
+        el.textContent = current.substring(0, charIndex);
+
+        let delay = isDeleting ? 55 : 95;
+
+        if (!isDeleting && charIndex === current.length) {
+            delay = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = 350;
+        }
+
+        typingTimeout = setTimeout(type, delay);
+    }
+
+    type();
 }
 
 function filterCertificates(categoria, btn) {
@@ -256,6 +299,7 @@ function UpdateLanguage(idioma) {
     document.getElementById("amg_secret").innerHTML = textos[idioma].amg_secret;
 
     renderCertificates();
+    startTypingEffect();
 }
 
 window.addEventListener("resize", () => {
