@@ -275,27 +275,30 @@ html, body {
 #projects {
     width: 100%;
     height: 93vh;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     padding: 0 40px 30px 40px;
 }
 
 .cards-grid {
     width: 100%;
-    height: calc(93vh - 110px);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 20px;
 }
 
 .custom-card {
-    height: 100%;
-    width: 100%;
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     background: #dddcdc;
     color: #FFFFFF;
@@ -303,14 +306,15 @@ html, body {
     text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
     text-align: center;
     border-radius: 30px 30px 0 0;
-    height: 18%;
+    padding: 18px 12px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project-about {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     background: linear-gradient(90deg, rgba(29, 165, 189,0.5), rgba(104, 92, 98,0.5));
     color: aliceblue;
@@ -318,9 +322,11 @@ html, body {
     text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 30px;
     text-align: justify;
     border-radius: 0 0 30px 30px;
-    height: 82%;
+    flex: 1;
+    min-height: 120px;
     display: flex;
-    padding: 24px;
+    align-items: flex-start;
+    padding: 20px;
     overflow: auto;
     scrollbar-width: none;
 }
