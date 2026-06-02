@@ -331,6 +331,20 @@ html, body {
     scrollbar-width: none;
 }
 
+/* EXPERIÊNCIA */
+#experience {
+    width: 100%;
+    height: 93vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0 40px 30px 40px;
+}
+
+#experience .custom-card {
+    flex: 0 0 clamp(260px, 60%, 680px);
+}
+
 /* CERTIFICADOS */
 #certificates {
     width: 100%;
