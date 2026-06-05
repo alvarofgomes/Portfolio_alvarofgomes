@@ -117,11 +117,13 @@ const textos = {
         certificate: "Certificados",
         certificates_title: "Certificados",
         projects_title: "Projetos",
-        description: "Futuro desenvolvedor back-end apaixonado por Java e pela criação de códigos que proporcionem interações confortáveis aos usuários.",
+        description: "desenvolvedor back-end apaixonado por Java e pela criação de códigos que proporcionem interações confortáveis aos usuários.",
         skill: "Habilidades Técnicas",
         connect: "Vamos nos Conectar?",
         experience_menu: "Experiência",
         experience_title: "Experiência Profissional",
+        exp_role: "Desenvolvedor Full Stack",
+        cv_btn_label: "Visualizar Currículo",
         exp_gw: `<div style="width:100%"><div style="font-size:1.05rem;font-weight:600;color:#cdf8ff;margin-bottom:4px;">Desenvolvedor Full Stack</div><div style="font-size:0.82rem;opacity:0.75;margin-bottom:16px;">03/2025 – Atual &nbsp;·&nbsp; Recife, PE</div><ul style="margin:0;padding-left:18px;line-height:1.9;"><li>Desenvolvimento e manutenção de sistemas de logística com Java 8 e JSP</li><li>Criação e otimização de relatórios SQL com consultas complexas em PostgreSQL</li><li>Implementação de funcionalidades front-end com JavaScript, integrando interfaces JSP ao back-end</li><li>Refinamentos técnicos de demandas para a equipe de desenvolvimento</li><li>Identificação e correção de bugs e levantamento de requisitos com stakeholders</li><li>Versionamento de código com Git/GitHub em ambiente de equipe</li></ul></div>`,
         bc_hub: `O site foi criado para destacar o anime Black Clover de forma simples, mas eficaz, usando animações leves e focando na experiência visual e interativa. Acesse o projeto <a href="https://alvarofgomes.github.io/site-simples/" target="_blank" style="color:#ccc; text-decoration:none;">aqui</a>.`,
         fc_calc: `A calculadora de freelancer foi desenvolvida com JavaScript para calcular o valor da hora trabalhada. Acesse o projeto <a href="https://alvarofgomes.github.io/calculadora-freelancer/" target="_blank" style="color:#ccc; text-decoration:none;">aqui</a>.`,
@@ -139,11 +141,13 @@ const textos = {
         certificate: "Certificates",
         certificates_title: "Certificates",
         projects_title: "Projects",
-        description: "Future back-end developer passionate about Java and creating code that provides comfortable interactions for users.",
+        description: "back-end developer passionate about Java and creating code that provides comfortable interactions for users.",
         skill: "Technical Skills",
         connect: "Let's connect?",
         experience_menu: "Experience",
         experience_title: "Professional Experience",
+        exp_role: "Full Stack Developer",
+        cv_btn_label: "View Resume",
         exp_gw: `<div style="width:100%"><div style="font-size:1.05rem;font-weight:600;color:#cdf8ff;margin-bottom:4px;">Full Stack Developer</div><div style="font-size:0.82rem;opacity:0.75;margin-bottom:16px;">03/2025 – Present &nbsp;·&nbsp; Recife, PE</div><ul style="margin:0;padding-left:18px;line-height:1.9;"><li>Development and maintenance of logistics systems using Java 8 and JSP</li><li>Creation and optimization of complex SQL reports in PostgreSQL</li><li>Front-end development with JavaScript, integrating JSP interfaces with the Java back-end</li><li>Technical refinements of demands for the development team</li><li>Bug identification and fixing, and requirements gathering with stakeholders</li><li>Code versioning with Git/GitHub in a team environment</li></ul></div>`,
         bc_hub: `The website was created to highlight the anime Black Clover in a simple yet effective way. Access the project <a href="https://alvarofgomes.github.io/site-simples/" target="_blank" style="color:#ccc; text-decoration:none;">here</a>.`,
         fc_calc: `The freelancer calculator was developed with JavaScript to calculate hourly work rates. Access the project <a href="https://alvarofgomes.github.io/calculadora-freelancer/" target="_blank" style="color:#ccc; text-decoration:none;">here</a>.`,
@@ -310,6 +314,8 @@ function UpdateLanguage(idioma) {
     document.getElementById("description").textContent = getDescricaoResponsiva();
     document.getElementById("skill").textContent = textos[idioma].skill;
     document.getElementById("connect").textContent = textos[idioma].connect;
+    document.getElementById("exp_role").textContent = textos[idioma].exp_role;
+    document.getElementById("cv_btn_label").textContent = textos[idioma].cv_btn_label;
     document.getElementById("exp_gw").innerHTML = textos[idioma].exp_gw;
     document.getElementById("bc_hub").innerHTML = textos[idioma].bc_hub;
     document.getElementById("fc_calc").innerHTML = textos[idioma].fc_calc;
