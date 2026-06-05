@@ -1,6 +1,6 @@
 # 🌐 Portfólio Pessoal — Álvaro Gomes
 
-Bem-vindo ao meu portfólio! Desenvolvido para apresentar minhas habilidades, projetos e certificados de forma moderna, responsiva e bilíngue.
+Bem-vindo ao meu portfólio! Desenvolvido para apresentar minha experiência profissional, projetos e certificados de forma moderna, responsiva e bilíngue.
 
 🔗 **[Ver online](https://alvarofgomes.github.io/Portfolio_Alvaro_Gomes-/)**
 
@@ -9,8 +9,9 @@ Bem-vindo ao meu portfólio! Desenvolvido para apresentar minhas habilidades, pr
 ## ✨ Funcionalidades
 
 - **Início** — apresentação com animação Lottie, stack técnica e links para redes sociais
-- **Projetos** — cards com descrição e link direto para cada projeto publicado
-- **Certificados** — 42 certificados organizados por categoria com filtros interativos
+- **Projetos** — cards com descrição e link direto para cada projeto
+- **Experiência** — foto profissional, cargo, responsabilidades e botão para visualizar currículo em PDF
+- **Certificados** — certificados organizados por categoria com filtros interativos
   - Categorias: Java, HTML/CSS/JS, Git & GitHub, Inteligência Artificial, Microsoft Office, Python, Bootcamps
 - **Bilíngue** — suporte a Português e English
 - **Responsivo** — adaptado para mobile, tablet e desktop
@@ -43,7 +44,10 @@ Portfolio_alvaro/
 │   └── handler.js         # Toda a lógica JS
 └── assets/
     ├── certificados/      # PDFs dos certificados
-    └── images/            # Imagem de fundo
+    ├── images/
+    │   ├── FundoPrincipal.jpg   # Imagem de fundo
+    │   └── foto-perfil.jpg      # Foto profissional
+    └── curriculo.pdf            # Currículo para visualização
 ```
 
 ---
