@@ -35,7 +35,7 @@ const textos = {
         empty: "Nenhum certificado nesta categoria.",
         typing_roles: ["Desenvolvedor Back-end", "Entusiasta de Java", "Estudante de Spring Boot", "Full Stack na GW Sistemas"],
         exp_role: "Desenvolvedor Full Stack",
-        exp_period: "03/2025 — Atual",
+        exp_period: "03/11/2025 — Atual",
         exp_bullets: [
             "Desenvolvimento e manutenção de sistemas de logística com Java 8 e JSP",
             "Criação e otimização de relatórios SQL com consultas complexas em PostgreSQL",
