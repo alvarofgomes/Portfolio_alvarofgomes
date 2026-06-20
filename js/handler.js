@@ -171,6 +171,18 @@ const projetos = [
             { type: "repo", url: "https://lnkd.in/dnsV6_js" },
             { type: "video", url: "https://www.linkedin.com/posts/alvarofgomes_praticando-javafx-na-pr%C3%A1tica-criando-um-activity-7429215696657473538-qVgf" }
         ]
+    },
+    {
+        id: "WA-BOT", path: "~/spring/whatsapp-bot",
+        name: { pt: "Bot WhatsApp", en: "WhatsApp Bot" },
+        desc: {
+            pt: "Bot de contagem regressiva para WhatsApp integrado com Twilio. A cada 12h enviava automaticamente quantos dias, horas e minutos faltavam para uma viagem — com mensagem especial no dia D.",
+            en: "WhatsApp countdown bot integrated with Twilio. Every 12h it automatically sent how many days, hours and minutes were left until a trip — with a special message on departure day."
+        },
+        tags: ["Java", "Spring Boot", "Twilio", "Scheduler"],
+        links: [
+            { type: "repo", url: "https://github.com/alvarofgomes/bot-whatsapp" }
+        ]
     }
 ];
 
