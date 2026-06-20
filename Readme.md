@@ -2,7 +2,7 @@
 
 Portfólio desenvolvido para apresentar minha experiência profissional, projetos e certificados de forma moderna, responsiva e bilíngue.
 
-🔗 **[Ver online](https://alvarofgomes.github.io/Portfolio_Alvaro_Gomes-/)**
+🔗 **[Ver online](https://alvarofgomes.github.io/Portfolio_alvarofgomes/)**
 
 ---
 
@@ -68,12 +68,12 @@ Portfolio_alvaro/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/alvarofgomes/Portfolio_Alvaro_Gomes-.git
+   git clone https://github.com/alvarofgomes/Portfolio_alvarofgomes.git
    ```
 
 2. Acesse a pasta:
    ```bash
-   cd Portfolio_Alvaro_Gomes-/Portfolio_alvaro
+   cd Portfolio_alvarofgomes
    ```
 
 3. Abra o `index.html` no navegador — não precisa de servidor ou instalação.
