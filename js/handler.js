@@ -195,6 +195,7 @@ const categorias = {
     ia:     { label: { pt: "Inteligência Artificial", en: "Artificial Intelligence" }, icon: "fas fa-robot", cor: "linear-gradient(135deg, #8B5CF6, #06b6d4)" },
     office: { label: { pt: "Microsoft Office", en: "Microsoft Office" }, icon: "fas fa-file-lines", cor: "linear-gradient(135deg, #d83b01, #0078d4)" },
     python: { label: { pt: "Python", en: "Python" },     icon: "fab fa-python",        cor: "linear-gradient(135deg, #3776ab, #ffd43b)" },
+    sql:    { label: { pt: "Banco de Dados", en: "Databases" }, icon: "fas fa-database", cor: "linear-gradient(135deg, #336791, #00758f)" },
     outros: { label: { pt: "Bootcamps", en: "Bootcamps" }, icon: "fas fa-graduation-cap", cor: "linear-gradient(135deg, #1da5bd, #4b5563)" }
 };
 
@@ -204,6 +205,7 @@ const certificados = [
     { titulo: "Ambiente de Desenvolvimento e Primeiros Passos com Python", arquivo: "Ambiente de Desenvolvimento e Primeiros Passos com Python.pdf", categoria: "python" },
     { titulo: "Aplicações Práticas da Inteligência Artificial", arquivo: "Aplicações Práticas da Inteligência Artificial.pdf", categoria: "ia" },
     { titulo: "Bootcamp Deloitte", arquivo: "Bootcamp_Deloitte.pdf", categoria: "outros" },
+    { titulo: "Bootcamp FAP 2026 - Formação Acelerada em Programação", arquivo: "Turma 06 - C4_Certificado BootCamp.pdf", categoria: "outros" },
     { titulo: "Java do básico ao avançado - com exercícios e projetos", arquivo: "Certificado - Java do básico ao avançado - com exercícios e projetos.pdf", categoria: "java" },
     { titulo: "Certificado de Conclusão", arquivo: "CERTIFICADO.pdf", categoria: "outros" },
     { titulo: "ChatGPT: otimizando a qualidade dos resultados", arquivo: "ChatGPT_otimizando a qualidade dos resultados.pdf", categoria: "ia" },
@@ -242,6 +244,7 @@ const certificados = [
     { titulo: "Praticando Lógica: Challenge Amigo Secreto", arquivo: "Praticando Logica de programação Challenge amigo secreto.pdf", categoria: "web" },
     { titulo: "Primeiros Passos da sua Jornada com Java e Cloud", arquivo: "Primeiros Passos da sua Jornada com Java e Cloud.pdf", categoria: "java" },
     { titulo: "SharePoint", arquivo: "SHAREPOINT.pdf", categoria: "office" },
+    { titulo: "SQL do básico ao avançado (com MySQL e Projeto)", arquivo: "SQL do básico ao avançado (com MySQL e Projeto).pdf", categoria: "sql" },
     { titulo: "Técnicas de Engenharia de Prompt", arquivo: "Técnicas de Engenharia de Prompt.pdf", categoria: "ia" },
     { titulo: "Versionamento de Código com Git", arquivo: "Versionamento de Código com Git.pdf", categoria: "git" },
     { titulo: "Certificado Softex", arquivo: "certificado softex.pdf", categoria: "outros" }
@@ -385,7 +388,7 @@ function renderCertificates() {
 
     //filtros
     if (filterBox) {
-        const ordem = ["todos", "java", "web", "git", "ia", "office", "python", "outros"];
+        const ordem = ["todos", "java", "web", "git", "ia", "office", "python", "sql", "outros"];
         filterBox.innerHTML = ordem.map(cat => {
             const count = cat === "todos" ? certificados.length : certificados.filter(c => c.categoria === cat).length;
             if (count === 0 && cat !== "todos") return "";
