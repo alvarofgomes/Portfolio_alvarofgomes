@@ -243,6 +243,7 @@ const certificados = [
     { titulo: "Performa", arquivo: "Performa.pdf", categoria: "outros" },
     { titulo: "Praticando Lógica: Challenge Amigo Secreto", arquivo: "Praticando Logica de programação Challenge amigo secreto.pdf", categoria: "web" },
     { titulo: "Primeiros Passos da sua Jornada com Java e Cloud", arquivo: "Primeiros Passos da sua Jornada com Java e Cloud.pdf", categoria: "java" },
+    { titulo: "Roga DX 2026", arquivo: "certificado-participacao-GTM0u.pdf", categoria: "outros" },
     { titulo: "SharePoint", arquivo: "SHAREPOINT.pdf", categoria: "office" },
     { titulo: "SQL do básico ao avançado (com MySQL e Projeto)", arquivo: "SQL do básico ao avançado (com MySQL e Projeto).pdf", categoria: "sql" },
     { titulo: "Técnicas de Engenharia de Prompt", arquivo: "Técnicas de Engenharia de Prompt.pdf", categoria: "ia" },
