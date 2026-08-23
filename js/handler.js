@@ -91,34 +91,16 @@ const textos = {
 /*projetos*/
 const projetos = [
     {
-        id: "BC-HUB", path: "~/web/black-clover",
-        name: { pt: "Black Clover Hub", en: "Black Clover Hub" },
+        id: "WA-BOT", path: "~/spring/whatsapp-bot",
+        name: { pt: "Bot WhatsApp", en: "WhatsApp Bot" },
         desc: {
-            pt: "Site dedicado ao anime Black Clover, com animações leves e foco total na experiência visual e interativa.",
-            en: "A site dedicated to the anime Black Clover, with light animations and a strong focus on the visual, interactive experience."
+            pt: "Bot de contagem regressiva para WhatsApp integrado com Twilio. A cada 12h enviava automaticamente quantos dias, horas e minutos faltavam para uma viagem — com mensagem especial no dia D.",
+            en: "WhatsApp countdown bot integrated with Twilio. Every 12h it automatically sent how many days, hours and minutes were left until a trip — with a special message on departure day."
         },
-        tags: ["HTML", "CSS", "JavaScript"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/site-simples/" }]
-    },
-    {
-        id: "FC-CALC", path: "~/web/freelancer-calc",
-        name: { pt: "Calculadora Freelancer", en: "Freelancer Calculator" },
-        desc: {
-            pt: "Calculadora em JavaScript para estimar o valor da hora trabalhada de um freelancer.",
-            en: "A JavaScript calculator to estimate a freelancer's hourly work rate."
-        },
-        tags: ["JavaScript", "HTML", "CSS"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/calculadora-freelancer/" }]
-    },
-    {
-        id: "AM-SEC", path: "~/web/amigo-secreto",
-        name: { pt: "Amigo Secreto", en: "Secret Friend" },
-        desc: {
-            pt: "Aplicação web interativa para organizar sorteios de amigo secreto de forma simples e dinâmica.",
-            en: "Interactive web app to organize Secret Friend draws in a simple, dynamic way."
-        },
-        tags: ["JavaScript", "DOM", "HTML"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/amigos-secreto/" }]
+        tags: ["Java", "Spring Boot", "Twilio", "Scheduler"],
+        links: [
+            { type: "repo", url: "https://github.com/alvarofgomes/bot-whatsapp" }
+        ]
     },
     {
         id: "TC-ENT", path: "~/java/tartaruga-cometa",
@@ -173,16 +155,34 @@ const projetos = [
         ]
     },
     {
-        id: "WA-BOT", path: "~/spring/whatsapp-bot",
-        name: { pt: "Bot WhatsApp", en: "WhatsApp Bot" },
+        id: "BC-HUB", path: "~/web/black-clover",
+        name: { pt: "Black Clover Hub", en: "Black Clover Hub" },
         desc: {
-            pt: "Bot de contagem regressiva para WhatsApp integrado com Twilio. A cada 12h enviava automaticamente quantos dias, horas e minutos faltavam para uma viagem — com mensagem especial no dia D.",
-            en: "WhatsApp countdown bot integrated with Twilio. Every 12h it automatically sent how many days, hours and minutes were left until a trip — with a special message on departure day."
+            pt: "Site dedicado ao anime Black Clover, com animações leves e foco total na experiência visual e interativa.",
+            en: "A site dedicated to the anime Black Clover, with light animations and a strong focus on the visual, interactive experience."
         },
-        tags: ["Java", "Spring Boot", "Twilio", "Scheduler"],
-        links: [
-            { type: "repo", url: "https://github.com/alvarofgomes/bot-whatsapp" }
-        ]
+        tags: ["HTML", "CSS", "JavaScript"],
+        links: [{ type: "live", url: "https://alvarofgomes.github.io/site-simples/" }]
+    },
+    {
+        id: "FC-CALC", path: "~/web/freelancer-calc",
+        name: { pt: "Calculadora Freelancer", en: "Freelancer Calculator" },
+        desc: {
+            pt: "Calculadora em JavaScript para estimar o valor da hora trabalhada de um freelancer.",
+            en: "A JavaScript calculator to estimate a freelancer's hourly work rate."
+        },
+        tags: ["JavaScript", "HTML", "CSS"],
+        links: [{ type: "live", url: "https://alvarofgomes.github.io/calculadora-freelancer/" }]
+    },
+    {
+        id: "AM-SEC", path: "~/web/amigo-secreto",
+        name: { pt: "Amigo Secreto", en: "Secret Friend" },
+        desc: {
+            pt: "Aplicação web interativa para organizar sorteios de amigo secreto de forma simples e dinâmica.",
+            en: "Interactive web app to organize Secret Friend draws in a simple, dynamic way."
+        },
+        tags: ["JavaScript", "DOM", "HTML"],
+        links: [{ type: "live", url: "https://alvarofgomes.github.io/amigos-secreto/" }]
     }
 ];
 
