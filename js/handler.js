@@ -91,6 +91,19 @@ const textos = {
 /*projetos*/
 const projetos = [
     {
+        id: "DS-LIST", path: "~/spring/dslist",
+        name: { pt: "DS List", en: "DS List" },
+        desc: {
+            pt: "API REST em Spring Boot para catalogar jogos e organizá-los em listas personalizáveis, com reordenação manual dos itens (drag-and-drop) via endpoint dedicado. Arquitetura em camadas (Controller/Service/Repository) com DTOs e PostgreSQL em produção. Hospedado no plano free do Render — o serviço dorme após 15 min de inatividade; se o primeiro acesso demorar ~30-50s pra carregar, é isso, é só aguardar.",
+            en: "Spring Boot REST API to catalog games and organize them into custom lists, with manual reordering (drag-and-drop) via a dedicated endpoint. Layered architecture (Controller/Service/Repository) with DTOs and PostgreSQL in production. Hosted on Render's free tier — the service sleeps after 15 min of inactivity; if the first load takes ~30-50s, that's why, just give it a moment."
+        },
+        tags: ["Java", "Spring Boot", "PostgreSQL", "JPA"],
+        links: [
+            { type: "live", url: "https://dslist-15tq.onrender.com/" },
+            { type: "repo", url: "https://github.com/alvarofgomes/dslist" }
+        ]
+    },
+    {
         id: "WA-BOT", path: "~/spring/whatsapp-bot",
         name: { pt: "Bot WhatsApp", en: "WhatsApp Bot" },
         desc: {
