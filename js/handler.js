@@ -175,7 +175,10 @@ const projetos = [
             en: "A site dedicated to the anime Black Clover, with light animations and a strong focus on the visual, interactive experience."
         },
         tags: ["HTML", "CSS", "JavaScript"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/site-simples/" }]
+        links: [
+            { type: "live", url: "https://alvarofgomes.github.io/site-simples/" },
+            { type: "repo", url: "https://github.com/alvarofgomes/site-simples" }
+        ]
     },
     {
         id: "FC-CALC", path: "~/web/freelancer-calc",
@@ -185,7 +188,10 @@ const projetos = [
             en: "A JavaScript calculator to estimate a freelancer's hourly work rate."
         },
         tags: ["JavaScript", "HTML", "CSS"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/calculadora-freelancer/" }]
+        links: [
+            { type: "live", url: "https://alvarofgomes.github.io/calculadora-freelancer/" },
+            { type: "repo", url: "https://github.com/alvarofgomes/calculadora-freelancer" }
+        ]
     },
     {
         id: "AM-SEC", path: "~/web/amigo-secreto",
@@ -195,7 +201,10 @@ const projetos = [
             en: "Interactive web app to organize Secret Friend draws in a simple, dynamic way."
         },
         tags: ["JavaScript", "DOM", "HTML"],
-        links: [{ type: "live", url: "https://alvarofgomes.github.io/amigos-secreto/" }]
+        links: [
+            { type: "live", url: "https://alvarofgomes.github.io/amigos-secreto/" },
+            { type: "repo", url: "https://github.com/alvarofgomes/amigos-secreto" }
+        ]
     }
 ];
 
