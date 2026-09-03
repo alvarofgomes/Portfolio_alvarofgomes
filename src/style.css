@@ -1,0 +1,146 @@
+/* ============================================================
+   Alvaro Gomes — Portfólio
+   Tema: dark dev-tools · rede/constelação · acentos azul→roxo
+   ============================================================ */
+
+:root {
+    --bg:          #070A14;
+    --bg-2:        #0A0E1B;
+    --surface:     rgba(255, 255, 255, 0.035);
+    --surface-2:   rgba(255, 255, 255, 0.06);
+    --surface-3:   rgba(255, 255, 255, 0.09);
+    --border:      rgba(255, 255, 255, 0.09);
+    --border-2:    rgba(255, 255, 255, 0.16);
+
+    --text:        #E9EDF8;
+    --muted:       #9BA6C4;
+    --faint:       #5E6987;
+
+    --blue:        #2A6FDB;
+    --blue-bright: #5B95F5;
+    --purple:      #8B5CF6;
+    --purple-br:   #A782FF;
+
+    --grad:        linear-gradient(115deg, #5B95F5 0%, #8B5CF6 100%);
+    --grad-soft:   linear-gradient(115deg, rgba(42,111,219,0.18), rgba(139,92,246,0.18));
+
+    --radius:      18px;
+    --radius-sm:   12px;
+    --nav-h:       66px;
+
+    --font-sans:   "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --font-mono:   "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a { color: inherit; }
+
+/* ============================================================
+   LAYOUT / SECTIONS
+   ============================================================ */
+.main {
+    position: relative;
+    z-index: 2;
+    padding-top: var(--nav-h);
+}
+
+.section {
+    display: none;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 64px) clamp(20px, 4vw, 48px) 80px;
+}
+.section.active { display: block; }
+
+.section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 38px;
+}
+.section-head .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--purple-br);
+    letter-spacing: 0.02em;
+}
+.section-title {
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.05;
+}
+.section-sub {
+    color: var(--muted);
+    font-size: 0.98rem;
+    max-width: 60ch;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .18s, box-shadow .2s, border-color .2s, background .2s;
+}
+.btn-primary {
+    background: var(--grad);
+    color: #fff;
+    box-shadow: 0 8px 26px rgba(91,72,200,0.35);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(91,72,200,0.5); }
+.btn-ghost {
+    background: var(--surface);
+    border-color: var(--border-2);
+    color: var(--text);
+}
+.btn-ghost:hover { transform: translateY(-2px); background: var(--surface-2); }
+
+.cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--blue-bright);
+    text-decoration: none;
+    font-weight: 500;
+    transition: gap .2s, color .2s;
+}
+.cert-link:hover { gap: 12px; color: var(--purple-br); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 420px) {
+    .btn { flex: 1; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
