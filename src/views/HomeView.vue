@@ -9,7 +9,7 @@ const { texto: role } = useTypingEffect(roles);
 </script>
 
 <template>
-  <section class="section active" id="home" data-screen-label="Home">
+  <section class="section" id="home" data-screen-label="Home">
     <div class="hero">
       <div class="hero-left">
         <div class="eyebrow">
@@ -78,10 +78,9 @@ const { texto: role } = useTypingEffect(roles);
 <style scoped>
 #home {
     min-height: calc(100vh - var(--nav-h));
-    display: none;
+    display: flex;
     align-items: center;
 }
-#home.active { display: flex; }
 
 .eyebrow {
     display: inline-flex;

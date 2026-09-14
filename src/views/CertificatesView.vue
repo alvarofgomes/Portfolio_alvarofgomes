@@ -8,7 +8,7 @@ const { filtro, certificadosFiltrados, categoriasDisponiveis, setFiltro } = useC
 </script>
 
 <template>
-  <section class="section active" id="certificates" data-screen-label="Certificados">
+  <section class="section" id="certificates" data-screen-label="Certificados">
     <div class="section-head">
       <span class="kicker">{{ t.certs_kicker }}</span>
       <h2 class="section-title">{{ t.certs_title }}</h2>

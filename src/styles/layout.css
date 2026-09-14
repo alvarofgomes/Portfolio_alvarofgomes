@@ -8,13 +8,12 @@
 }
 
 .section {
-    display: none;
+    display: block;
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
     padding: clamp(28px, 5vw, 64px) clamp(20px, 4vw, 48px) 80px;
 }
-.section.active { display: block; }
 
 .section-head {
     display: flex;

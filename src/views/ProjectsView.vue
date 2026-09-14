@@ -7,7 +7,7 @@ const { t } = useLanguage();
 </script>
 
 <template>
-  <section class="section active" id="projects" data-screen-label="Projetos">
+  <section class="section" id="projects" data-screen-label="Projetos">
     <div class="section-head">
       <span class="kicker">{{ t.projects_kicker }}</span>
       <h2 class="section-title">{{ t.projects_title }}</h2>

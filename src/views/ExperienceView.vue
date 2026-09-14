@@ -6,7 +6,7 @@ const { t } = useLanguage();
 </script>
 
 <template>
-  <section class="section active" id="experience" data-screen-label="Experiência">
+  <section class="section" id="experience" data-screen-label="Experiência">
     <div class="section-head">
       <span class="kicker">{{ t.exp_kicker }}</span>
       <h2 class="section-title">{{ t.exp_title }}</h2>
