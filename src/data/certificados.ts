@@ -38,6 +38,7 @@ const raw: Certificado[] = [
     arquivo: "ChatGPT_otimizando a qualidade dos resultados.pdf",
     categoria: "ia"
   },
+  { titulo: "Código Claude 101", arquivo: "Codigo Claude.pdf", categoria: "ia" },
   {
     titulo: "Configurando e Usando o GitHub",
     arquivo: "Configurando e Usando o GitHub.pdf",
@@ -104,6 +105,11 @@ const raw: Certificado[] = [
     titulo: "Iniciante em Programação G8 - ONE",
     arquivo: "Iniciante em Programação G8 - ONE.pdf",
     categoria: "outros"
+  },
+  {
+    titulo: "Introduction to Claude Cowork",
+    arquivo: "Introduction to Claude Cowork.pdf",
+    categoria: "ia"
   },
   {
     titulo: "Introdução à Engenharia de Prompts e GitHub Copilot com Java",
