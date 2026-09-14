@@ -9,7 +9,7 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 ## Funcionalidades
 
 - **Início** — terminal widget com syntax-highlighted, efeito de digitação nas roles, chips de stack técnica e links para redes sociais
-- **Projetos** — cards data-driven com path estilo terminal, tags de tecnologia e links para repositório/demo
+- **Projetos** — cards data-driven com path estilo terminal, tags de tecnologia e links para repositório/demo, com os projetos de foco back-end em destaque
 - **Experiência** — layout com perfil fixo (sticky), foto profissional com borda gradiente, timeline de responsabilidades e botão para currículo em PDF
 - **Certificados** — cards organizados por categoria com filtros interativos
 - **Bilíngue** — alternância PT/EN via composable de i18n, sem recarregar a página
@@ -26,6 +26,7 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 | TypeScript | Tipagem dos dados (projetos, certificados, textos) e composables |
 | Vite | Build, dev server e code-splitting por rota |
 | Vue Router | Roteamento em modo hash (compatível com GitHub Pages) |
+| ESLint + Prettier | Lint (`eslint-plugin-vue` + `@vue/eslint-config-typescript`) e formatação padronizada |
 | Font Awesome 6.5 | Ícones |
 | Space Grotesk | Tipografia principal (Google Fonts) |
 | JetBrains Mono | Tipografia mono no terminal widget e elementos de código (Google Fonts) |
@@ -36,19 +37,24 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 
 ```
 Portfolio_alvaro/
-├── index.html              # entrada do Vite
+├── .github/workflows/deploy.yml   # CI: build + deploy automático no GitHub Pages
+├── index.html                     # entrada do Vite
 ├── vite.config.ts
+├── eslint.config.js
+├── .prettierrc.json
+├── .editorconfig
 ├── tsconfig*.json
 ├── src/
 │   ├── main.ts
 │   ├── App.vue
-│   ├── router/              # rotas (home, projetos, experiência, certificados)
-│   ├── views/                # uma view por seção/rota
-│   ├── components/           # NavBar, cards, fundo animado, footer
-│   ├── composables/           # useLanguage, useCertFilter, useTypingEffect, useNetworkBackground
-│   ├── data/                  # projetos, certificados, categorias e textos i18n (tipados)
-│   ├── types/                 # interfaces compartilhadas
-│   └── style.css              # tokens, reset e estilos globais compartilhados
+│   ├── router/            # rotas (home, projetos, experiência, certificados)
+│   ├── views/              # uma view por seção/rota
+│   ├── components/         # NavBar, cards, fundo animado, footer
+│   ├── composables/        # useLanguage, useCertFilter, useTypingEffect, useNetworkBackground
+│   ├── data/                # projetos, certificados, categorias e textos i18n (tipados)
+│   ├── types/                # interfaces compartilhadas
+│   ├── utils/                 # helpers (ex.: resolução de paths de assets)
+│   └── styles/                 # base.css (tokens/reset) + layout.css (compartilhado), agregados em index.css
 └── public/
     └── assets/
         ├── certificados/      # PDFs dos certificados
@@ -69,9 +75,11 @@ Portfolio_alvaro/
 
 **Sistema i18n** — textos em PT/EN ficam no objeto `textos` (`src/data/textos.ts`). O composable `useLanguage` expõe o idioma atual de forma reativa para qualquer componente.
 
-**CSS por componente** — cada componente/view carrega só o CSS que usa (`<style scoped>`), com tokens e estilos verdadeiramente globais centralizados em `src/style.css`.
+**CSS por componente** — cada componente/view carrega só o CSS que usa (`<style scoped>`), com tokens e estilos verdadeiramente globais centralizados em `src/styles/` (`base.css` + `layout.css`, importados via `index.css`).
 
 **Acessibilidade** — suporte a `prefers-reduced-motion` para desativar animações em dispositivos que pedem menos movimento.
+
+**Deploy automático** — todo push na `main` dispara um workflow do GitHub Actions (`.github/workflows/deploy.yml`) que builda o projeto e publica o `dist/` no GitHub Pages, sem passo manual.
 
 ---
 
@@ -98,6 +106,14 @@ Portfolio_alvaro/
    npm run build
    npm run preview
    ```
+
+### Outros comandos
+
+| Comando | O que faz |
+|---|---|
+| `npm run type-check` | Roda só a checagem de tipos (`vue-tsc`) |
+| `npm run lint` | ESLint com autofix em todo o projeto |
+| `npm run format` | Formata `src/` com Prettier |
 
 ---
 
