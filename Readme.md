@@ -12,8 +12,9 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 - **Projetos** — cards data-driven com path estilo terminal, tags de tecnologia e links para repositório/demo
 - **Experiência** — layout com perfil fixo (sticky), foto profissional com borda gradiente, timeline de responsabilidades e botão para currículo em PDF
 - **Certificados** — cards organizados por categoria com filtros interativos
-- **Bilíngue** — alternância PT/EN via atributos `data-i18n`, sem recarregar a página
-- **Responsivo** — adaptado para mobile, tablet e desktop com media queries em arquivo único
+- **Bilíngue** — alternância PT/EN via composable de i18n, sem recarregar a página
+- **Navegação com deep link** — cada aba tem sua própria rota (Vue Router, modo hash), então dá pra linkar direto pra uma seção
+- **Responsivo** — adaptado para mobile, tablet e desktop
 
 ---
 
@@ -21,14 +22,13 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 
 | Tecnologia | Uso |
 |---|---|
-| HTML5 | Estrutura semântica e atributos `data-i18n` para i18n |
-| CSS3 | Design system com variáveis, Grid, Flexbox, multi-layer background |
-| JavaScript ES6+ | Renderização data-driven, filtros, typing effect, Web Animations API |
+| Vue 3 | Composition API (`<script setup>`), componentização por seção |
+| TypeScript | Tipagem dos dados (projetos, certificados, textos) e composables |
+| Vite | Build, dev server e code-splitting por rota |
+| Vue Router | Roteamento em modo hash (compatível com GitHub Pages) |
 | Font Awesome 6.5 | Ícones |
 | Space Grotesk | Tipografia principal (Google Fonts) |
 | JetBrains Mono | Tipografia mono no terminal widget e elementos de código (Google Fonts) |
-
-> Projeto 100% vanilla — sem frameworks ou dependências de build.
 
 ---
 
@@ -36,29 +36,40 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 
 ```
 Portfolio_alvaro/
-├── index.html
-├── css/
-│   └── style.css          # Todos os estilos (desktop + responsivo)
-├── js/
-│   └── handler.js         # Lógica JS: dados, renderização, i18n, animações
-└── assets/
-    ├── certificados/      # PDFs dos certificados
-    ├── images/
-    │   └── foto-perfil.jpg      # Foto profissional
-    └── curriculo.pdf            # Currículo para visualização
+├── index.html              # entrada do Vite
+├── vite.config.ts
+├── tsconfig*.json
+├── src/
+│   ├── main.ts
+│   ├── App.vue
+│   ├── router/              # rotas (home, projetos, experiência, certificados)
+│   ├── views/                # uma view por seção/rota
+│   ├── components/           # NavBar, cards, fundo animado, footer
+│   ├── composables/           # useLanguage, useCertFilter, useTypingEffect, useNetworkBackground
+│   ├── data/                  # projetos, certificados, categorias e textos i18n (tipados)
+│   ├── types/                 # interfaces compartilhadas
+│   └── style.css              # tokens, reset e estilos globais compartilhados
+└── public/
+    └── assets/
+        ├── certificados/      # PDFs dos certificados
+        ├── images/
+        │   └── foto-perfil.jpg
+        └── curriculo.pdf
 ```
 
 ---
 
 ## Destaques técnicos
 
-**Background multi-layer** — três camadas sobrepostas: gradiente radial (`.bg-glow`), grid de pontos (`.bg-grid`) e canvas com animação de constelações (`#bg-canvas`).
+**Background multi-layer** — três camadas sobrepostas: gradiente radial (`.bg-glow`), grid de pontos (`.bg-grid`) e canvas com animação de constelações (`#bg-canvas`), encapsuladas no componente `BackgroundLayers.vue`.
 
 **Terminal widget** — bloco de código Java com syntax highlighting feito puramente em HTML/CSS, sem biblioteca de highlight, exibido no hero da home como identidade visual dev-tools.
 
-**Arquitetura data-driven** — projetos e certificados são definidos como arrays de objetos em `handler.js` e renderizados via funções (`renderProjects`, `renderCertificates`). Para adicionar um projeto basta inserir um objeto no array.
+**Arquitetura data-driven e tipada** — projetos e certificados são arrays tipados em `src/data/`. Para adicionar um projeto ou certificado, basta inserir um objeto no array correspondente.
 
-**Sistema i18n** — textos em PT/EN ficam no objeto `textos` em JS. O HTML usa `data-i18n="chave"` e a função de troca de idioma percorre todos os elementos e substitui o conteúdo sem recarregar.
+**Sistema i18n** — textos em PT/EN ficam no objeto `textos` (`src/data/textos.ts`). O composable `useLanguage` expõe o idioma atual de forma reativa para qualquer componente.
+
+**CSS por componente** — cada componente/view carrega só o CSS que usa (`<style scoped>`), com tokens e estilos verdadeiramente globais centralizados em `src/style.css`.
 
 **Acessibilidade** — suporte a `prefers-reduced-motion` para desativar animações em dispositivos que pedem menos movimento.
 
@@ -69,14 +80,24 @@ Portfolio_alvaro/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/alvarofgomes/Portfolio_alvarofgomes.git
-   ```
-
-2. Acesse a pasta:
-   ```bash
    cd Portfolio_alvarofgomes
    ```
 
-3. Abra o `index.html` no navegador — não precisa de servidor ou instalação.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Suba o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+4. Ou gere o build de produção:
+   ```bash
+   npm run build
+   npm run preview
+   ```
 
 ---
 
