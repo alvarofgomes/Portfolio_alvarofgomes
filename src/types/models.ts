@@ -22,15 +22,7 @@ export interface Project {
 }
 
 export type CategoriaKey =
-  | "todos"
-  | "java"
-  | "web"
-  | "git"
-  | "ia"
-  | "office"
-  | "python"
-  | "sql"
-  | "outros";
+  "todos" | "java" | "web" | "git" | "ia" | "office" | "python" | "sql" | "outros";
 
 export interface Categoria {
   label: Localized;

@@ -7,7 +7,7 @@ const { t } = useLanguage();
 </script>
 
 <template>
-  <section class="section" id="projects" data-screen-label="Projetos">
+  <section id="projects" class="section" data-screen-label="Projetos">
     <div class="section-head">
       <span class="kicker">{{ t.projects_kicker }}</span>
       <h2 class="section-title">{{ t.projects_title }}</h2>
@@ -21,8 +21,8 @@ const { t } = useLanguage();
 
 <style scoped>
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
 }
 </style>

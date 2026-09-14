@@ -8,7 +8,7 @@ const { filtro, certificadosFiltrados, categoriasDisponiveis, setFiltro } = useC
 </script>
 
 <template>
-  <section class="section" id="certificates" data-screen-label="Certificados">
+  <section id="certificates" class="section" data-screen-label="Certificados">
     <div class="section-head">
       <span class="kicker">{{ t.certs_kicker }}</span>
       <h2 class="section-title">{{ t.certs_title }}</h2>
@@ -37,46 +37,59 @@ const { filtro, certificadosFiltrados, categoriasDisponiveis, setFiltro } = useC
 
 <style scoped>
 .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
 }
 .filter-btn {
-    appearance: none;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    padding: 8px 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: color .2s, background .2s, border-color .2s, transform .2s;
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
 }
-.filter-btn i { font-size: 0.82rem; }
-.filter-btn:hover { color: var(--text); background: var(--surface-2); transform: translateY(-2px); }
+.filter-btn i {
+  font-size: 0.82rem;
+}
+.filter-btn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
 .filter-btn.active {
-    color: #fff;
-    background: var(--grad);
-    border-color: transparent;
+  color: #fff;
+  background: var(--grad);
+  border-color: transparent;
 }
-.filter-count { opacity: 0.7; font-size: 0.72rem; }
+.filter-count {
+  opacity: 0.7;
+  font-size: 0.72rem;
+}
 
 .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
 }
 
 .cert-empty {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: var(--faint);
-    font-family: var(--font-mono);
-    padding: 40px 0;
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  padding: 40px 0;
 }
 </style>

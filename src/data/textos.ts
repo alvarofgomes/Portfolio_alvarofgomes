@@ -47,7 +47,8 @@ export const textos: Record<"pt" | "en", Textos> = {
     avail: "Disponível para oportunidades",
     projects_kicker: "// o que eu construí",
     projects_title: "Projetos",
-    projects_sub: "Uma seleção de coisas que construí — da web ao desktop, passando por sistemas back-end.",
+    projects_sub:
+      "Uma seleção de coisas que construí — da web ao desktop, passando por sistemas back-end.",
     live: "ver online",
     repo: "repositório",
     video: "vídeo",
@@ -94,7 +95,8 @@ export const textos: Record<"pt" | "en", Textos> = {
     avail: "Open to opportunities",
     projects_kicker: "// what I've built",
     projects_title: "Projects",
-    projects_sub: "A selection of things I've built — from the web to the desktop and back-end systems.",
+    projects_sub:
+      "A selection of things I've built — from the web to the desktop and back-end systems.",
     live: "live",
     repo: "repository",
     video: "video",

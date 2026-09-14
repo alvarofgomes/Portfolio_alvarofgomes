@@ -4,48 +4,59 @@
    ============================================================ */
 
 :root {
-    --bg:          #070A14;
-    --bg-2:        #0A0E1B;
-    --surface:     rgba(255, 255, 255, 0.035);
-    --surface-2:   rgba(255, 255, 255, 0.06);
-    --border:      rgba(255, 255, 255, 0.09);
-    --border-2:    rgba(255, 255, 255, 0.16);
+  --bg: #070a14;
+  --bg-2: #0a0e1b;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-2: rgba(255, 255, 255, 0.16);
 
-    --text:        #E9EDF8;
-    --muted:       #9BA6C4;
-    --faint:       #5E6987;
+  --text: #e9edf8;
+  --muted: #9ba6c4;
+  --faint: #5e6987;
 
-    --blue-bright: #5B95F5;
-    --purple-br:   #A782FF;
+  --blue-bright: #5b95f5;
+  --purple-br: #a782ff;
 
-    --grad:        linear-gradient(115deg, #5B95F5 0%, #8B5CF6 100%);
+  --grad: linear-gradient(115deg, #5b95f5 0%, #8b5cf6 100%);
 
-    --radius:      18px;
-    --nav-h:       66px;
+  --radius: 18px;
+  --nav-h: 66px;
 
-    --font-sans:   "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-    --font-mono:   "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-sans);
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+}
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
