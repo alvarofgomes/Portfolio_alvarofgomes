@@ -15,10 +15,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync:
+  sync-build-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      sha: ${{ steps.commit.outputs.sha }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +37,6 @@ jobs:
         run: node scripts/sync-certificados.mjs
 
       - name: Commit and push if changed
-        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -47,10 +47,18 @@ jobs:
             git commit -m "chore: sincronizar certificados a partir do repo Certificados"
             git push
           fi
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-  build-and-deploy:
-    needs: sync
-    uses: ./.github/workflows/build-deploy.yml
-    with:
-      ref: ${{ needs.sync.outputs.sha }}
+      - name: Build
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
