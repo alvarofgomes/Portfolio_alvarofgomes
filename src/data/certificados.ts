@@ -317,6 +317,11 @@ const raw: Certificado[] = [
     categoria: "office"
   },
   {
+    titulo: { pt: "Plataforma Claude 101", en: "Claude Platform 101" },
+    arquivo: "Plataforma Claude 101.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Performa", en: "Performa" },
     arquivo: "Performa.pdf",
     categoria: "outros"
