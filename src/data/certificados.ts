@@ -33,6 +33,7 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   { titulo: "Certificado de Conclusão", arquivo: "CERTIFICADO.pdf", categoria: "outros" },
+  { titulo: "Claude Code em ação", arquivo: "Claude Code em acao.pdf", categoria: "ia" },
   {
     titulo: "ChatGPT: otimizando a qualidade dos resultados",
     arquivo: "ChatGPT_otimizando a qualidade dos resultados.pdf",
@@ -48,6 +49,11 @@ const raw: Certificado[] = [
     titulo: "Conhecendo o GitHub Copilot: Aumentando sua Produtividade",
     arquivo: "Conhecendo o GitHub Copilot Aumentando sua Produtividade na Programação.pdf",
     categoria: "git"
+  },
+  {
+    titulo: "Construindo Equipes Eficazes de Agentes Humanos (Beta)",
+    arquivo: "Construindo Equipes Eficazes de Agentes Humanos (Beta).pdf",
+    categoria: "ia"
   },
   {
     titulo: "Crie um site simples usando HTML, CSS e JavaScript",
@@ -127,6 +133,11 @@ const raw: Certificado[] = [
     categoria: "outros"
   },
   {
+    titulo: "Introdução ao Protocolo de Contexto do Modelo",
+    arquivo: "Introdução ao Protocolo de Contexto do Modelo.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: "Introdução à Experiência Santander 2025 - 2º Semestre",
     arquivo: "Introdução à Experiência Santander 2025 - 2º Semestre.pdf",
     categoria: "outros"
@@ -188,6 +199,11 @@ const raw: Certificado[] = [
     categoria: "office"
   },
   { titulo: "Performa", arquivo: "Performa.pdf", categoria: "outros" },
+  {
+    titulo: "Protocolo de Contexto do Modelo: Tópicos Avançados",
+    arquivo: "Protocolo de Contexto do Modelo Topicos Avancados.pdf",
+    categoria: "ia"
+  },
   {
     titulo: "Praticando Lógica: Challenge Amigo Secreto",
     arquivo: "Praticando Logica de programação Challenge amigo secreto.pdf",
