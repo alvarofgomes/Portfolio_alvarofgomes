@@ -1,5 +1,9 @@
 import type { Certificado } from "@/types/models";
 
+// Gerado automaticamente por scripts/sync-certificados.mjs a partir de
+// https://github.com/alvarofgomes/Certificados/blob/main/certificados.json
+// Não editar à mão — a próxima sincronização sobrescreve este arquivo.
+
 const raw: Certificado[] = [
   {
     titulo: {
@@ -44,22 +48,14 @@ const raw: Certificado[] = [
     categoria: "outros"
   },
   {
-    titulo: {
-      pt: "Java do básico ao avançado - com exercícios e projetos",
-      en: "Java from Basics to Advanced - with Exercises and Projects"
-    },
-    arquivo: "Certificado - Java do básico ao avançado - com exercícios e projetos.pdf",
-    categoria: "java"
-  },
-  {
     titulo: { pt: "Certificado de Conclusão", en: "Certificate of Completion" },
     arquivo: "CERTIFICADO.pdf",
     categoria: "outros"
   },
   {
-    titulo: { pt: "Claude Code em ação", en: "Claude Code in Action" },
-    arquivo: "Claude Code em acao.pdf",
-    categoria: "ia"
+    titulo: { pt: "Certificado Softex", en: "Softex Certificate" },
+    arquivo: "certificado softex.pdf",
+    categoria: "outros"
   },
   {
     titulo: {
@@ -67,6 +63,11 @@ const raw: Certificado[] = [
       en: "ChatGPT: Optimizing the Quality of Results"
     },
     arquivo: "ChatGPT_otimizando a qualidade dos resultados.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Claude Code em ação", en: "Claude Code in Action" },
+    arquivo: "Claude Code em acao.pdf",
     categoria: "ia"
   },
   {
@@ -180,16 +181,13 @@ const raw: Certificado[] = [
     categoria: "web"
   },
   {
-    titulo: {
-      pt: "Iniciante em Programação G8 - ONE",
-      en: "Beginner Programming G8 - ONE"
-    },
+    titulo: { pt: "Iniciante em Programação G8 - ONE", en: "Beginner Programming G8 - ONE" },
     arquivo: "Iniciante em Programação G8 - ONE.pdf",
     categoria: "outros"
   },
   {
-    titulo: { pt: "Introduction to Claude Cowork", en: "Introduction to Claude Cowork" },
-    arquivo: "Introduction to Claude Cowork.pdf",
+    titulo: { pt: "Introdução à Engenharia de Prompts", en: "Introduction to Prompt Engineering" },
+    arquivo: "Introdução à Engenharia de Prompts.pdf",
     categoria: "ia"
   },
   {
@@ -202,27 +200,11 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
-      pt: "Introdução à Engenharia de Prompts",
-      en: "Introduction to Prompt Engineering"
-    },
-    arquivo: "Introdução à Engenharia de Prompts.pdf",
-    categoria: "ia"
-  },
-  {
-    titulo: {
       pt: "Introdução à Experiência Decola Tech",
       en: "Introduction to the Decola Tech Experience"
     },
     arquivo: "Introducao a Experiencia Decola Tech.pdf",
     categoria: "outros"
-  },
-  {
-    titulo: {
-      pt: "Introdução ao Protocolo de Contexto do Modelo",
-      en: "Introduction to the Model Context Protocol"
-    },
-    arquivo: "Introdução ao Protocolo de Contexto do Modelo.pdf",
-    categoria: "ia"
   },
   {
     titulo: {
@@ -241,9 +223,30 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   {
+    titulo: {
+      pt: "Introdução ao Protocolo de Contexto do Modelo",
+      en: "Introduction to the Model Context Protocol"
+    },
+    arquivo: "Introdução ao Protocolo de Contexto do Modelo.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Introdução e objetivos", en: "Introduction and Objectives" },
     arquivo: "Introdução e objetivos.pdf",
     categoria: "outros"
+  },
+  {
+    titulo: { pt: "Introduction to Claude Cowork", en: "Introduction to Claude Cowork" },
+    arquivo: "Introduction to Claude Cowork.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
+      pt: "Java do básico ao avançado - com exercícios e projetos",
+      en: "Java from Basics to Advanced - with Exercises and Projects"
+    },
+    arquivo: "Certificado - Java do básico ao avançado - com exercícios e projetos.pdf",
+    categoria: "java"
   },
   {
     titulo: {
@@ -278,10 +281,7 @@ const raw: Certificado[] = [
     categoria: "web"
   },
   {
-    titulo: {
-      pt: "Lógica e Pensamento Computacional",
-      en: "Logic and Computational Thinking"
-    },
+    titulo: { pt: "Lógica e Pensamento Computacional", en: "Logic and Computational Thinking" },
     arquivo: "Lógica e Pensamento.pdf",
     categoria: "outros"
   },
@@ -312,10 +312,7 @@ const raw: Certificado[] = [
     categoria: "office"
   },
   {
-    titulo: {
-      pt: "Microsoft Word 2016 - Intermediário",
-      en: "Microsoft Word 2016 - Intermediate"
-    },
+    titulo: { pt: "Microsoft Word 2016 - Intermediário", en: "Microsoft Word 2016 - Intermediate" },
     arquivo: "Microsoft Word 2016 - Intermediário.pdf",
     categoria: "office"
   },
@@ -323,14 +320,6 @@ const raw: Certificado[] = [
     titulo: { pt: "Performa", en: "Performa" },
     arquivo: "Performa.pdf",
     categoria: "outros"
-  },
-  {
-    titulo: {
-      pt: "Protocolo de Contexto do Modelo: Tópicos Avançados",
-      en: "Model Context Protocol: Advanced Topics"
-    },
-    arquivo: "Protocolo de Contexto do Modelo Topicos Avancados.pdf",
-    categoria: "ia"
   },
   {
     titulo: {
@@ -347,6 +336,14 @@ const raw: Certificado[] = [
     },
     arquivo: "Primeiros Passos da sua Jornada com Java e Cloud.pdf",
     categoria: "java"
+  },
+  {
+    titulo: {
+      pt: "Protocolo de Contexto do Modelo: Tópicos Avançados",
+      en: "Model Context Protocol: Advanced Topics"
+    },
+    arquivo: "Protocolo de Contexto do Modelo Topicos Avancados.pdf",
+    categoria: "ia"
   },
   {
     titulo: { pt: "Roga DX 2026", en: "Roga DX 2026" },
@@ -367,10 +364,7 @@ const raw: Certificado[] = [
     categoria: "sql"
   },
   {
-    titulo: {
-      pt: "Técnicas de Engenharia de Prompt",
-      en: "Prompt Engineering Techniques"
-    },
+    titulo: { pt: "Técnicas de Engenharia de Prompt", en: "Prompt Engineering Techniques" },
     arquivo: "Técnicas de Engenharia de Prompt.pdf",
     categoria: "ia"
   },
@@ -378,11 +372,6 @@ const raw: Certificado[] = [
     titulo: { pt: "Versionamento de Código com Git", en: "Code Versioning with Git" },
     arquivo: "Versionamento de Código com Git.pdf",
     categoria: "git"
-  },
-  {
-    titulo: { pt: "Certificado Softex", en: "Softex Certificate" },
-    arquivo: "certificado softex.pdf",
-    categoria: "outros"
   }
 ];
 
