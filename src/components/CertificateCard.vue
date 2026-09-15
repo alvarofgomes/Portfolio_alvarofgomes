@@ -21,7 +21,7 @@ const arquivo = computed(() =>
     </div>
     <div class="cert-body">
       <span class="cert-badge">{{ info.label[idioma] }}</span>
-      <h3 class="cert-title">{{ certificado.titulo }}</h3>
+      <h3 class="cert-title">{{ certificado.titulo[idioma] }}</h3>
       <a class="cert-link" :href="arquivo" target="_blank" rel="noopener">
         <i class="fas fa-file-pdf"></i> {{ t.open_pdf }}
       </a>

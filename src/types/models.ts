@@ -31,7 +31,7 @@ export interface Categoria {
 }
 
 export interface Certificado {
-  titulo: string;
+  titulo: Localized;
   arquivo: string;
   categoria: Exclude<CategoriaKey, "todos">;
 }
