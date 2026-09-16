@@ -118,6 +118,11 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   {
+    titulo: { pt: "Ensinando Fluência em IA", en: "Teaching Fluency in AI" },
+    arquivo: "Ensinando Fluencia em IA.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
       pt: "Fundamentos da Linguagem de Programação Java",
       en: "Fundamentals of the Java Programming Language"
@@ -236,7 +241,7 @@ const raw: Certificado[] = [
     categoria: "outros"
   },
   {
-    titulo: { pt: "Introduction to Claude Cowork", en: "Introduction to Claude Cowork" },
+    titulo: { pt: "Introdução ao Claude Cowork", en: "Introduction to Claude Cowork" },
     arquivo: "Introduction to Claude Cowork.pdf",
     categoria: "ia"
   },
