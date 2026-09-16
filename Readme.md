@@ -37,7 +37,12 @@ Portfólio desenvolvido para apresentar minha experiência profissional, projeto
 
 ```
 Portfolio_alvaro/
-├── .github/workflows/deploy.yml   # CI: build + deploy automático no GitHub Pages
+├── .github/workflows/
+│   ├── deploy.yml              # CI: build + deploy no GitHub Pages (push na main)
+│   ├── build-deploy.yml        # workflow reutilizável de build + deploy
+│   └── sync-certificados.yml   # sincroniza certificados do repo Certificados
+├── scripts/
+│   └── sync-certificados.mjs   # busca o manifesto e regenera src/data/certificados.ts
 ├── index.html                     # entrada do Vite
 ├── vite.config.ts
 ├── eslint.config.js
@@ -53,11 +58,10 @@ Portfolio_alvaro/
 │   ├── composables/        # useLanguage, useCertFilter, useTypingEffect, useNetworkBackground
 │   ├── data/                # projetos, certificados, categorias e textos i18n (tipados)
 │   ├── types/                # interfaces compartilhadas
-│   ├── utils/                 # helpers (ex.: resolução de paths de assets)
+│   ├── utils/                 # helpers (paths de assets e URL dos certificados no CDN)
 │   └── styles/                 # base.css (tokens/reset) + layout.css (compartilhado), agregados em index.css
 └── public/
     └── assets/
-        ├── certificados/      # PDFs dos certificados
         ├── images/
         │   └── foto-perfil.jpg
         └── curriculo.pdf
@@ -71,7 +75,14 @@ Portfolio_alvaro/
 
 **Terminal widget** — bloco de código Java com syntax highlighting feito puramente em HTML/CSS, sem biblioteca de highlight, exibido no hero da home como identidade visual dev-tools.
 
-**Arquitetura data-driven e tipada** — projetos e certificados são arrays tipados em `src/data/`. Para adicionar um projeto ou certificado, basta inserir um objeto no array correspondente.
+**Arquitetura data-driven e tipada** — projetos e certificados são arrays tipados em `src/data/`. Para adicionar um projeto, basta inserir um objeto em `src/data/projetos.ts`.
+
+**Certificados vêm de outro repositório** — os PDFs e seus metadados moram em
+[alvarofgomes/Certificados](https://github.com/alvarofgomes/Certificados), não aqui. Ao commitar um
+certificado novo lá (PDF + entrada no `certificados.json`), um workflow avisa este repositório, que
+regenera `src/data/certificados.ts` e publica sozinho. Os PDFs em si são servidos pelo CDN do
+jsDelivr direto do repo de origem (`certificadoUrl` em `src/utils/asset.ts`), então não ficam
+duplicados aqui.
 
 **Sistema i18n** — textos em PT/EN ficam no objeto `textos` (`src/data/textos.ts`). O composable `useLanguage` expõe o idioma atual de forma reativa para qualquer componente.
 
