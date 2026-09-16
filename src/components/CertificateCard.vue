@@ -3,15 +3,13 @@ import { computed } from "vue";
 import type { Certificado } from "@/types/models";
 import { categorias } from "@/data/categorias";
 import { useLanguage } from "@/composables/useLanguage";
-import { asset } from "@/utils/asset";
+import { certificadoUrl } from "@/utils/asset";
 
 const props = defineProps<{ certificado: Certificado }>();
 const { idioma, t } = useLanguage();
 
 const info = computed(() => categorias[props.certificado.categoria]);
-const arquivo = computed(() =>
-  asset(`assets/certificados/${encodeURIComponent(props.certificado.arquivo)}`)
-);
+const arquivo = computed(() => certificadoUrl(props.certificado.arquivo));
 </script>
 
 <template>

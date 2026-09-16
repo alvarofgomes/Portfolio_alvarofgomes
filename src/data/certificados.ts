@@ -3,6 +3,8 @@ import type { Certificado } from "@/types/models";
 // Gerado automaticamente por scripts/sync-certificados.mjs a partir de
 // https://github.com/alvarofgomes/Certificados/blob/main/certificados.json
 // Não editar à mão — a próxima sincronização sobrescreve este arquivo.
+// Os PDFs não ficam neste repositório: são servidos pelo jsDelivr direto do
+// repo Certificados (ver certificadoUrl em src/utils/asset.ts).
 
 const raw: Certificado[] = [
   {

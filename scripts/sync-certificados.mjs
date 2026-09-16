@@ -1,14 +1,12 @@
-import { mkdir, writeFile, readFile } from "node:fs/promises";
+import { writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import prettier from "prettier";
 
 const MANIFEST_URL =
   "https://raw.githubusercontent.com/alvarofgomes/Certificados/main/certificados.json";
-const RAW_BASE = "https://raw.githubusercontent.com/alvarofgomes/Certificados/main/";
 const CONTENTS_API_URL = "https://api.github.com/repos/alvarofgomes/Certificados/contents/";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const CERT_DIR = path.join(ROOT, "public", "assets", "certificados");
 const OUT_FILE = path.join(ROOT, "src", "data", "certificados.ts");
 
 const VALID_CATEGORIAS = ["java", "web", "git", "ia", "office", "python", "sql", "outros"];
@@ -64,16 +62,6 @@ function validateFilesExist(manifest, realFiles, errors) {
   }
 }
 
-async function downloadPdf(arquivo) {
-  const url = RAW_BASE + encodeURIComponent(arquivo);
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) {
-    throw new Error(`Falha ao baixar "${arquivo}": HTTP ${res.status}`);
-  }
-  const buffer = Buffer.from(await res.arrayBuffer());
-  await writeFile(path.join(CERT_DIR, arquivo), buffer);
-}
-
 function escapeString(str) {
   return str.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
@@ -94,6 +82,8 @@ function toTsSource(entries) {
 // Gerado automaticamente por scripts/sync-certificados.mjs a partir de
 // https://github.com/alvarofgomes/Certificados/blob/main/certificados.json
 // Não editar à mão — a próxima sincronização sobrescreve este arquivo.
+// Os PDFs não ficam neste repositório: são servidos pelo jsDelivr direto do
+// repo Certificados (ver certificadoUrl em src/utils/asset.ts).
 
 const raw: Certificado[] = [
 ${items}
@@ -129,13 +119,6 @@ async function main() {
   }
 
   console.log(`${manifest.length} certificados no manifesto, todos validados.`);
-
-  await mkdir(CERT_DIR, { recursive: true });
-
-  for (const entry of manifest) {
-    console.log("Baixando:", entry.arquivo);
-    await downloadPdf(entry.arquivo);
-  }
 
   const tsSource = toTsSource(manifest);
   const formatted = await formatWithPrettier(tsSource);
