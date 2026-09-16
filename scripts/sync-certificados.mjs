@@ -5,6 +5,7 @@ import prettier from "prettier";
 const MANIFEST_URL =
   "https://raw.githubusercontent.com/alvarofgomes/Certificados/main/certificados.json";
 const RAW_BASE = "https://raw.githubusercontent.com/alvarofgomes/Certificados/main/";
+const CONTENTS_API_URL = "https://api.github.com/repos/alvarofgomes/Certificados/contents/";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const CERT_DIR = path.join(ROOT, "public", "assets", "certificados");
@@ -24,18 +25,42 @@ async function fetchManifest() {
   return manifest;
 }
 
-function validateEntry(entry, index) {
+function validateEntry(entry, index, errors) {
   const required = ["arquivo", "titulo_pt", "titulo_en", "categoria"];
   for (const field of required) {
     if (!entry[field] || typeof entry[field] !== "string") {
-      throw new Error(`Entrada ${index} do manifesto sem campo "${field}" válido`);
+      errors.push(`Entrada ${index} do manifesto sem campo "${field}" válido`);
+      return;
     }
   }
   if (!VALID_CATEGORIAS.includes(entry.categoria)) {
-    throw new Error(
+    errors.push(
       `Entrada ${index} ("${entry.arquivo}") tem categoria inválida: "${entry.categoria}". ` +
         `Válidas: ${VALID_CATEGORIAS.join(", ")}`
     );
+  }
+}
+
+async function fetchRepoFileNames() {
+  const res = await fetch(CONTENTS_API_URL, {
+    headers: { Accept: "application/vnd.github+json" },
+    cache: "no-store"
+  });
+  if (!res.ok) {
+    throw new Error(`Falha ao listar arquivos do repo Certificados: HTTP ${res.status}`);
+  }
+  const items = await res.json();
+  return new Set(items.filter((i) => i.type === "file").map((i) => i.name));
+}
+
+function validateFilesExist(manifest, realFiles, errors) {
+  for (const entry of manifest) {
+    if (entry.arquivo && !realFiles.has(entry.arquivo)) {
+      errors.push(
+        `Arquivo "${entry.arquivo}" (título: "${entry.titulo_pt}") não existe no repo Certificados. ` +
+          `Confira acentos/espaços/maiúsculas no campo "arquivo" do manifesto.`
+      );
+    }
   }
 }
 
@@ -89,8 +114,21 @@ async function formatWithPrettier(source) {
 async function main() {
   console.log("Buscando manifesto em", MANIFEST_URL);
   const manifest = await fetchManifest();
-  manifest.forEach(validateEntry);
-  console.log(`${manifest.length} certificados no manifesto.`);
+
+  const errors = [];
+  manifest.forEach((entry, index) => validateEntry(entry, index, errors));
+
+  console.log("Conferindo se todos os arquivos do manifesto existem no repo...");
+  const realFiles = await fetchRepoFileNames();
+  validateFilesExist(manifest, realFiles, errors);
+
+  if (errors.length > 0) {
+    throw new Error(
+      `${errors.length} problema(s) no manifesto:\n` + errors.map((e) => `  - ${e}`).join("\n")
+    );
+  }
+
+  console.log(`${manifest.length} certificados no manifesto, todos validados.`);
 
   await mkdir(CERT_DIR, { recursive: true });
 
