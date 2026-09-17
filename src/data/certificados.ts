@@ -259,6 +259,15 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
+      pt: "Implantando o Claude Enterprise com confiança: as cinco decisões que moldam sua implementação",
+      en: "Deploying Claude Enterprise with Confidence: The Five Decisions That Shape Your Implementation"
+    },
+    arquivo:
+      "Implantando o Claude Enterprise com confianca as cinco decisoes que moldam sua implementacao.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
       pt: "Java do básico ao avançado - com exercícios e projetos",
       en: "Java from Basics to Advanced - with Exercises and Projects"
     },
