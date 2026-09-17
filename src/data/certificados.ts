@@ -112,6 +112,11 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: { pt: "Claude com a Base Amazônica", en: "Claude with the Amazonian Base" },
+    arquivo: "Claude com a Base Amazonica.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
       pt: "Dominando Interfaces e Lambda em Java",
       en: "Mastering Interfaces and Lambdas in Java"
