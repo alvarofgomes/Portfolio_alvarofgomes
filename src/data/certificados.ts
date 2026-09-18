@@ -138,13 +138,18 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   {
+    titulo: { pt: "Ensinando Fluência em IA", en: "Teaching Fluency in AI" },
+    arquivo: "Ensinando Fluencia em IA.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Estruturas de Controle em Java", en: "Control Structures in Java" },
     arquivo: "Estruturas de Controle em Java.pdf",
     categoria: "java"
   },
   {
-    titulo: { pt: "Ensinando Fluência em IA", en: "Teaching Fluency in AI" },
-    arquivo: "Ensinando Fluencia em IA.pdf",
+    titulo: { pt: "Fluência em IA para educadores", en: "AI Fluency for Educators" },
+    arquivo: "Fluência em IA para educadores.pdf",
     categoria: "ia"
   },
   {
