@@ -118,6 +118,14 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
+      pt: "Claude com a Vertex AI do Google Cloud",
+      en: "Claude with Google Cloud's Vertex AI"
+    },
+    arquivo: "Claude com a Vertex AI do Google Cloud.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
       pt: "Dominando Interfaces e Lambda em Java",
       en: "Mastering Interfaces and Lambdas in Java"
     },
