@@ -125,6 +125,11 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: { pt: "Construindo com a API Claude", en: "Building with the Claude API" },
+    arquivo: "Construindo com a API Claude.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
       pt: "Dominando Interfaces e Lambda em Java",
       en: "Mastering Interfaces and Lambdas in Java"
