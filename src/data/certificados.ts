@@ -42,21 +42,31 @@ const raw: Certificado[] = [
     categoria: "outros"
   },
   {
+    titulo: { pt: "Capacidades e limitações da IA", en: "Capabilities and Limitations of AI" },
+    arquivo: "Capacidades e limitações da IA.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
-      pt: "Bootcamp FAP 2026 - Formação Acelerada em Programação",
-      en: "FAP 2026 Bootcamp - Accelerated Programming Training"
+      pt: "Java do básico ao avançado - com exercícios e projetos",
+      en: "Java from Basics to Advanced - with Exercises and Projects"
     },
-    arquivo: "Turma 06 - C4_Certificado BootCamp.pdf",
+    arquivo: "Certificado - Java do básico ao avançado - com exercícios e projetos.pdf",
+    categoria: "java"
+  },
+  {
+    titulo: { pt: "Certificado Softex", en: "Softex Certificate" },
+    arquivo: "certificado softex.pdf",
+    categoria: "outros"
+  },
+  {
+    titulo: { pt: "Roga DX 2026", en: "Roga DX 2026" },
+    arquivo: "certificado-participacao-GTM0u.pdf",
     categoria: "outros"
   },
   {
     titulo: { pt: "Certificado de Conclusão", en: "Certificate of Completion" },
     arquivo: "CERTIFICADO.pdf",
-    categoria: "outros"
-  },
-  {
-    titulo: { pt: "Certificado Softex", en: "Softex Certificate" },
-    arquivo: "certificado softex.pdf",
     categoria: "outros"
   },
   {
@@ -68,8 +78,26 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: { pt: "Claude 101", en: "Claude 101" },
+    arquivo: "Claude 101.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Claude Code em ação", en: "Claude Code in Action" },
     arquivo: "Claude Code em acao.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Claude com a Base Amazônica", en: "Claude with the Amazonian Base" },
+    arquivo: "Claude com a Base Amazonica.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
+      pt: "Claude com a Vertex AI do Google Cloud",
+      en: "Claude with Google Cloud's Vertex AI"
+    },
+    arquivo: "Claude com a Vertex AI do Google Cloud.pdf",
     categoria: "ia"
   },
   {
@@ -91,6 +119,11 @@ const raw: Certificado[] = [
     categoria: "git"
   },
   {
+    titulo: { pt: "Construindo com a API Claude", en: "Building with the Claude API" },
+    arquivo: "Construindo com a API Claude.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
       pt: "Construindo Equipes Eficazes de Agentes Humanos (Beta)",
       en: "Building Effective Human-Agent Teams (Beta)"
@@ -105,29 +138,6 @@ const raw: Certificado[] = [
     },
     arquivo: "Crie um site simples usando HTML, CSS e JavaScript.pdf",
     categoria: "web"
-  },
-  {
-    titulo: { pt: "Claude 101", en: "Claude 101" },
-    arquivo: "Claude 101.pdf",
-    categoria: "ia"
-  },
-  {
-    titulo: { pt: "Claude com a Base Amazônica", en: "Claude with the Amazonian Base" },
-    arquivo: "Claude com a Base Amazonica.pdf",
-    categoria: "ia"
-  },
-  {
-    titulo: {
-      pt: "Claude com a Vertex AI do Google Cloud",
-      en: "Claude with Google Cloud's Vertex AI"
-    },
-    arquivo: "Claude com a Vertex AI do Google Cloud.pdf",
-    categoria: "ia"
-  },
-  {
-    titulo: { pt: "Construindo com a API Claude", en: "Building with the Claude API" },
-    arquivo: "Construindo com a API Claude.pdf",
-    categoria: "ia"
   },
   {
     titulo: {
@@ -216,14 +226,18 @@ const raw: Certificado[] = [
     categoria: "web"
   },
   {
+    titulo: {
+      pt: "Implantando o Claude Enterprise com confiança: as cinco decisões que moldam sua implementação",
+      en: "Deploying Claude Enterprise with Confidence: The Five Decisions That Shape Your Implementation"
+    },
+    arquivo:
+      "Implantando o Claude Enterprise com confianca as cinco decisoes que moldam sua implementacao.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Iniciante em Programação G8 - ONE", en: "Beginner Programming G8 - ONE" },
     arquivo: "Iniciante em Programação G8 - ONE.pdf",
     categoria: "outros"
-  },
-  {
-    titulo: { pt: "Introdução à Engenharia de Prompts", en: "Introduction to Prompt Engineering" },
-    arquivo: "Introdução à Engenharia de Prompts.pdf",
-    categoria: "ia"
   },
   {
     titulo: {
@@ -231,6 +245,11 @@ const raw: Certificado[] = [
       en: "Introduction to Prompt Engineering and GitHub Copilot with Java"
     },
     arquivo: "Introdução à Engenharia de Prompts e GitHub Copilot com Java.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Introdução à Engenharia de Prompts", en: "Introduction to Prompt Engineering" },
+    arquivo: "Introdução à Engenharia de Prompts.pdf",
     categoria: "ia"
   },
   {
@@ -274,23 +293,6 @@ const raw: Certificado[] = [
     titulo: { pt: "Introdução ao Claude Cowork", en: "Introduction to Claude Cowork" },
     arquivo: "Introduction to Claude Cowork.pdf",
     categoria: "ia"
-  },
-  {
-    titulo: {
-      pt: "Implantando o Claude Enterprise com confiança: as cinco decisões que moldam sua implementação",
-      en: "Deploying Claude Enterprise with Confidence: The Five Decisions That Shape Your Implementation"
-    },
-    arquivo:
-      "Implantando o Claude Enterprise com confianca as cinco decisoes que moldam sua implementacao.pdf",
-    categoria: "ia"
-  },
-  {
-    titulo: {
-      pt: "Java do básico ao avançado - com exercícios e projetos",
-      en: "Java from Basics to Advanced - with Exercises and Projects"
-    },
-    arquivo: "Certificado - Java do básico ao avançado - com exercícios e projetos.pdf",
-    categoria: "java"
   },
   {
     titulo: {
@@ -361,14 +363,14 @@ const raw: Certificado[] = [
     categoria: "office"
   },
   {
-    titulo: { pt: "Plataforma Claude 101", en: "Claude Platform 101" },
-    arquivo: "Plataforma Claude 101.pdf",
-    categoria: "ia"
-  },
-  {
     titulo: { pt: "Performa", en: "Performa" },
     arquivo: "Performa.pdf",
     categoria: "outros"
+  },
+  {
+    titulo: { pt: "Plataforma Claude 101", en: "Claude Platform 101" },
+    arquivo: "Plataforma Claude 101.pdf",
+    categoria: "ia"
   },
   {
     titulo: {
@@ -395,11 +397,6 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
-    titulo: { pt: "Roga DX 2026", en: "Roga DX 2026" },
-    arquivo: "certificado-participacao-GTM0u.pdf",
-    categoria: "outros"
-  },
-  {
     titulo: { pt: "SharePoint", en: "SharePoint" },
     arquivo: "SHAREPOINT.pdf",
     categoria: "office"
@@ -416,6 +413,14 @@ const raw: Certificado[] = [
     titulo: { pt: "Técnicas de Engenharia de Prompt", en: "Prompt Engineering Techniques" },
     arquivo: "Técnicas de Engenharia de Prompt.pdf",
     categoria: "ia"
+  },
+  {
+    titulo: {
+      pt: "Bootcamp FAP 2026 - Formação Acelerada em Programação",
+      en: "FAP 2026 Bootcamp - Accelerated Programming Training"
+    },
+    arquivo: "Turma 06 - C4_Certificado BootCamp.pdf",
+    categoria: "outros"
   },
   {
     titulo: { pt: "Versionamento de Código com Git", en: "Code Versioning with Git" },
