@@ -158,8 +158,18 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   {
+    titulo: { pt: "Fluência em IA para construtores", en: "AI Fluency for Builders" },
+    arquivo: "Fluência em IA para construtores.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Fluência em IA para educadores", en: "AI Fluency for Educators" },
     arquivo: "Fluência em IA para educadores.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Fluência em IA para estudantes", en: "AI Fluency for Students" },
+    arquivo: "Fluência em IA para estudantes.pdf",
     categoria: "ia"
   },
   {
