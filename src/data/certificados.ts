@@ -158,6 +158,14 @@ const raw: Certificado[] = [
     categoria: "java"
   },
   {
+    titulo: {
+      pt: "Fluência em IA: estrutura e fundamentos",
+      en: "AI Fluency: Framework and Foundations"
+    },
+    arquivo: "Fluência em IA Estrutura e fundamentos.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Fluência em IA para construtores", en: "AI Fluency for Builders" },
     arquivo: "Fluência em IA para construtores.pdf",
     categoria: "ia"
@@ -170,6 +178,11 @@ const raw: Certificado[] = [
   {
     titulo: { pt: "Fluência em IA para estudantes", en: "AI Fluency for Students" },
     arquivo: "Fluência em IA para estudantes.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Fluência em IA para trabalhos criativos", en: "AI Fluency for Creative Work" },
+    arquivo: "Fluência em IA para trabalhos criativos.pdf",
     categoria: "ia"
   },
   {
@@ -233,6 +246,14 @@ const raw: Certificado[] = [
       en: "HTML and CSS: Responsiveness and Publishing Projects"
     },
     arquivo: "HTML e CSS trabalhando com responsividade e publicação de projetos.pdf",
+    categoria: "web"
+  },
+  {
+    titulo: {
+      pt: "HTML5 e CSS: aprendendo a criar sites do zero na prática",
+      en: "HTML5 and CSS: Learning to Build Websites from Scratch"
+    },
+    arquivo: "HTML5 e CSS Aprendendo criar sites do zero na pratica.pdf",
     categoria: "web"
   },
   {
@@ -303,6 +324,14 @@ const raw: Certificado[] = [
     titulo: { pt: "Introdução ao Claude Cowork", en: "Introduction to Claude Cowork" },
     arquivo: "Introduction to Claude Cowork.pdf",
     categoria: "ia"
+  },
+  {
+    titulo: {
+      pt: "Itaú - Java com Inteligência Artificial",
+      en: "Itaú - Java with Artificial Intelligence"
+    },
+    arquivo: "Itaú - Java com Inteligência Artificial.pdf",
+    categoria: "java"
   },
   {
     titulo: {
