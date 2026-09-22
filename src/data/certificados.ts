@@ -78,6 +78,11 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: { pt: "CI&T - Java AI Copilot", en: "CI&T - Java AI Copilot" },
+    arquivo: "CI&T - Java AI Copilot.pdf",
+    categoria: "java"
+  },
+  {
     titulo: { pt: "Claude 101", en: "Claude 101" },
     arquivo: "Claude 101.pdf",
     categoria: "ia"
@@ -171,6 +176,14 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: {
+      pt: "Fluência em IA para educadores da pré-escola ao ensino médio",
+      en: "AI Fluency for K-12 Educators"
+    },
+    arquivo: "Fluência em IA para educadores da pré escola ao ensino médio.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: { pt: "Fluência em IA para educadores", en: "AI Fluency for Educators" },
     arquivo: "Fluência em IA para educadores.pdf",
     categoria: "ia"
@@ -178,6 +191,19 @@ const raw: Certificado[] = [
   {
     titulo: { pt: "Fluência em IA para estudantes", en: "AI Fluency for Students" },
     arquivo: "Fluência em IA para estudantes.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
+      pt: "Fluência em IA para organizações sem fins lucrativos",
+      en: "AI Fluency for Nonprofits"
+    },
+    arquivo: "Fluência em IA para organizações sem fins lucrativos.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: { pt: "Fluência em IA para pequenas empresas", en: "AI Fluency for Small Business" },
+    arquivo: "Fluência em IA para pequenas empresas.pdf",
     categoria: "ia"
   },
   {
