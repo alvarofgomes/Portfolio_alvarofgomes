@@ -462,6 +462,14 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: {
+      pt: "SCRUM: Gerenciando Projetos de Software com Agilidade",
+      en: "SCRUM: Managing Software Projects with Agility"
+    },
+    arquivo: "SCRUM Gerenciando Projetos de Software com Agilidade.pdf",
+    categoria: "outros"
+  },
+  {
     titulo: { pt: "SharePoint", en: "SharePoint" },
     arquivo: "SHAREPOINT.pdf",
     categoria: "office"
