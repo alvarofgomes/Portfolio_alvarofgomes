@@ -221,6 +221,15 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
+      pt: "Gestão de Projetos de Software com PMBOK: Guia Essencial para Iniciantes",
+      en: "Software Project Management with PMBOK: Essential Guide for Beginners"
+    },
+    arquivo:
+      "Gestão_de_Projetos_de_Software_com_PMBOK_Guia_Essencial_para_Iniciantes-Certificado_digital_4991766.pdf",
+    categoria: "outros"
+  },
+  {
+    titulo: {
       pt: "Git e GitHub: compartilhando e colaborando em projetos",
       en: "Git and GitHub: Sharing and Collaborating on Projects"
     },
