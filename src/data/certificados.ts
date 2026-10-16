@@ -29,6 +29,11 @@ const raw: Certificado[] = [
     categoria: "python"
   },
   {
+    titulo: { pt: "APIs Seguras na Era da IA", en: "Secure APIs in the AI Era" },
+    arquivo: "APIs Seguras na Era da IA.pdf",
+    categoria: "ia"
+  },
+  {
     titulo: {
       pt: "Aplicações Práticas da Inteligência Artificial",
       en: "Practical Applications of Artificial Intelligence"
