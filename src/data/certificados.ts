@@ -312,6 +312,14 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
+      pt: "Inteligência Artificial I - Conhecendo as redes neurais artificiais",
+      en: "Artificial Intelligence I - Getting to Know Artificial Neural Networks"
+    },
+    arquivo: "Inteligência Artificial I – Conhecendo as redes neurais artificiais.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
       pt: "Introdução à Engenharia de Prompts e GitHub Copilot com Java",
       en: "Introduction to Prompt Engineering and GitHub Copilot with Java"
     },
