@@ -320,6 +320,14 @@ const raw: Certificado[] = [
   },
   {
     titulo: {
+      pt: "Inteligência Artificial II - Aprofundando o estudo das redes neurais artificiais",
+      en: "Artificial Intelligence II - Deepening the Study of Artificial Neural Networks"
+    },
+    arquivo: "Inteligência Artificial II - Aprofundando o estudo das redes neurais artificiais.pdf",
+    categoria: "ia"
+  },
+  {
+    titulo: {
       pt: "Introdução à Engenharia de Prompts e GitHub Copilot com Java",
       en: "Introduction to Prompt Engineering and GitHub Copilot with Java"
     },
