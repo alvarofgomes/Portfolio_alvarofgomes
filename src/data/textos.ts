@@ -20,7 +20,6 @@ export interface Textos {
   exp_loc: string;
   exp_profile_role: string;
   cv_btn: string;
-  exp_now: string;
   certs_kicker: string;
   certs_title: string;
   certs_sub: string;
@@ -41,10 +40,10 @@ export const textos: Record<"pt" | "en", Textos> = {
     nav_certs: "certificados",
     hero_hello: "olá, eu sou",
     hero_desc:
-      "Desenvolvedor back-end apaixonado por Java e pela criação de códigos que proporcionem interações confortáveis aos usuários. Atualmente construindo sistemas de logística no mundo real.",
+      "Desenvolvedor back-end apaixonado por Java e pela criação de códigos que proporcionem interações confortáveis aos usuários. Com experiência em sistemas de logística, APIs REST e bancos de dados relacionais.",
     hero_cv: "Ver Currículo",
     hero_projects: "Ver Projetos",
-    avail: "Disponível para oportunidades",
+    avail: "Aberto a conexões",
     projects_kicker: "// o que eu construí",
     projects_title: "Projetos",
     projects_sub:
@@ -58,7 +57,6 @@ export const textos: Record<"pt" | "en", Textos> = {
     exp_loc: "Recife, PE — Brasil",
     exp_profile_role: "Desenvolvedor Full Stack",
     cv_btn: "Visualizar Currículo",
-    exp_now: "ATUAL",
     certs_kicker: "// aprendizado contínuo",
     certs_title: "Certificados",
     certs_sub: "Cursos, bootcamps e formações que concluí ao longo da jornada.",
@@ -69,10 +67,10 @@ export const textos: Record<"pt" | "en", Textos> = {
       "Desenvolvedor Back-end",
       "Entusiasta de Java",
       "Estudante de Spring Boot",
-      "Full Stack na GW Sistemas"
+      "Desenvolvedor Full Stack"
     ],
     exp_role: "Desenvolvedor Full Stack",
-    exp_period: "03/11/2025 — Atual",
+    exp_period: "11/2025 — 09/2026",
     exp_bullets: [
       "Desenvolvimento e manutenção de sistemas de logística com Java 8 e JSP",
       "Criação e otimização de relatórios SQL com consultas complexas em PostgreSQL",
@@ -89,10 +87,10 @@ export const textos: Record<"pt" | "en", Textos> = {
     nav_certs: "certificates",
     hero_hello: "hi, I'm",
     hero_desc:
-      "Back-end developer passionate about Java and writing code that gives users comfortable, reliable interactions. Currently building real-world logistics systems.",
+      "Back-end developer passionate about Java and writing code that gives users comfortable, reliable interactions. Experienced with logistics systems, REST APIs and relational databases.",
     hero_cv: "View Resume",
     hero_projects: "View Projects",
-    avail: "Open to opportunities",
+    avail: "Open to connections",
     projects_kicker: "// what I've built",
     projects_title: "Projects",
     projects_sub:
@@ -106,7 +104,6 @@ export const textos: Record<"pt" | "en", Textos> = {
     exp_loc: "Recife, PE — Brazil",
     exp_profile_role: "Full Stack Developer",
     cv_btn: "View Resume",
-    exp_now: "CURRENT",
     certs_kicker: "// continuous learning",
     certs_title: "Certificates",
     certs_sub: "Courses, bootcamps and trainings I've completed along the way.",
@@ -117,10 +114,10 @@ export const textos: Record<"pt" | "en", Textos> = {
       "Back-end Developer",
       "Java Enthusiast",
       "Spring Boot Learner",
-      "Full Stack at GW Sistemas"
+      "Full Stack Developer"
     ],
     exp_role: "Full Stack Developer",
-    exp_period: "03/2025 — Present",
+    exp_period: "11/2025 — 09/2026",
     exp_bullets: [
       "Development and maintenance of logistics systems using Java 8 and JSP",
       "Creation and optimization of complex SQL reports in PostgreSQL",

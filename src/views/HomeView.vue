@@ -90,7 +90,7 @@ const { texto: role } = useTypingEffect(roles);
             <span class="line">&nbsp;&nbsp;<span class="t-kw">String</span><span class="t-punc">[]</span> <span class="t-key">stack</span> <span class="t-punc">=</span> <span class="t-punc">{</span></span>
             <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Java"</span><span class="t-punc">,</span> <span class="t-str">"Spring"</span><span class="t-punc">,</span> <span class="t-str">"SQL"</span><span class="t-punc">,</span> <span class="t-str">"JS"</span></span>
             <span class="line">&nbsp;&nbsp;<span class="t-punc">};</span></span>
-            <span class="line">&nbsp;&nbsp;<span class="t-kw">boolean</span> <span class="t-key">openToWork</span> <span class="t-punc">=</span> <span class="t-kw">true</span><span class="t-punc">;</span></span>
+            <span class="line">&nbsp;&nbsp;<span class="t-kw">boolean</span> <span class="t-key">sempreAprendendo</span> <span class="t-punc">=</span> <span class="t-kw">true</span><span class="t-punc">;</span></span>
             <span class="line"><span class="t-punc">}</span></span>
             <span class="line">&nbsp;</span>
             <span class="line"><span class="t-prompt">$</span> <span class="t-comment">run Developer.build()</span></span>

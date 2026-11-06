@@ -37,9 +37,7 @@ const { t } = useLanguage();
       <div class="timeline">
         <article class="exp-item">
           <div class="exp-item-top">
-            <div class="exp-company">
-              GW Sistemas <span class="badge-live">{{ t.exp_now }}</span>
-            </div>
+            <div class="exp-company">GW Sistemas</div>
             <div class="exp-period">{{ t.exp_period }}</div>
           </div>
           <div class="exp-jobrole">{{ t.exp_role }}</div>
@@ -145,16 +143,6 @@ const { t } = useLanguage();
   display: flex;
   align-items: center;
   gap: 10px;
-}
-.exp-company .badge-live {
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  color: #34d399;
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  background: rgba(52, 211, 153, 0.08);
-  padding: 2px 8px;
-  border-radius: 20px;
-  letter-spacing: 0.04em;
 }
 .exp-period {
   font-family: var(--font-mono);
