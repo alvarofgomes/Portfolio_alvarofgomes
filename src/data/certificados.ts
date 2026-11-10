@@ -42,6 +42,11 @@ const raw: Certificado[] = [
     categoria: "ia"
   },
   {
+    titulo: { pt: "Aprenda CI/CD com GitLab em 4 horas", en: "Learn CI/CD with GitLab in 4 Hours" },
+    arquivo: "Aprenda CICD com Gitlab.pdf",
+    categoria: "git"
+  },
+  {
     titulo: { pt: "Bootcamp Deloitte", en: "Deloitte Bootcamp" },
     arquivo: "Bootcamp_Deloitte.pdf",
     categoria: "outros"
